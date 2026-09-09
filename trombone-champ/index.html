@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en-us"><head>
+<base href="https://cdn.jsdelivr.net/gh/wasmdotrip/wasm.rip@main/files/tchamp/"><script data-cmx="ad-block-script">(function() {
+  const blockedHosts = ["doubleclick.net","googleads.g.doubleclick.net","googlesyndication.com","googleadservices.com","googletagmanager.com","google-analytics.com","analytics.google.com","adservice.google.com","adtrafficquality.google","amazon-adsystem.com","adnxs.com","taboola.com","outbrain.com","media.net","nitropay.com","playwire.com","sharethrough.com","adinplay.com","intergient.com","snigelweb.com","snigel.com","static.cloudflareinsights.com","adskeeper.com","adsterra.com"];
+  const blockedSelectors = [".adsbygoogle","[data-ad-client]","[data-ad-slot]","[data-ad-region]","iframe[src*='doubleclick.net']","iframe[src*='googlesyndication.com']","iframe[src*='googleadservices.com']","iframe[src*='googletagmanager.com']","iframe[src*='adnxs.com']","iframe[src*='taboola.com']","iframe[src*='outbrain.com']","iframe[src*='adinplay.com']","iframe[src*='intergient.com']","script[src*='doubleclick.net']","script[src*='googlesyndication.com']","script[src*='googleadservices.com']","script[src*='googletagmanager.com']","script[src*='google-analytics.com']","script[src*='analytics.google.com']","script[src*='adnxs.com']","script[src*='taboola.com']","script[src*='outbrain.com']","script[src*='adinplay.com']","script[src*='intergient.com']","script[src*='playwire.com']","script[src*='nitropay.com']","script[src*='cloudflareinsights.com']","ins.adsbygoogle","[id*='google_ads']","[id*='ad-slot']","[class*='ad-slot']","[id*='taboola']","[class*='taboola']","[id*='outbrain']","[class*='outbrain']","[id*='playwire']","[class*='playwire']","[id*='snigel']","[class*='snigel']","[id*='adinplay']","[class*='adinplay']"];
+  const adHintPattern = /\b(adsbygoogle|google[_-]?ads?|doubleclick|taboola|outbrain|playwire|adinplay|intergient|snigel)\b/i;
+
+  function isBlockedUrl(url) {
+    if (!url) return false;
+    try {
+      const parsed = new URL(url, location.href);
+      return blockedHosts.some(pattern =>
+        parsed.hostname === pattern ||
+        parsed.hostname.endsWith("." + pattern) ||
+        parsed.href.includes(pattern)
+      );
+    } catch (error) {
+      return blockedHosts.some(pattern => String(url).includes(pattern));
+    }
+  }
+
+  function looksLikeAdNode(node) {
+    if (!(node instanceof Element)) return false;
+    if (node.matches(blockedSelectors.join(","))) return true;
+
+    const src = node.getAttribute("src") || node.getAttribute("data-src") || "";
+    if (isBlockedUrl(src)) return true;
+
+    const signature = [
+      node.id,
+      typeof node.className === "string" ? node.className : "",
+      node.getAttribute("name"),
+      node.getAttribute("data-ad-client"),
+      node.getAttribute("data-ad-slot")
+    ].filter(Boolean).join(" ");
+
+    return adHintPattern.test(signature);
+  }
+
+  function scrub(root) {
+    if (!root || !root.querySelectorAll) return;
+
+    root.querySelectorAll("*").forEach(node => {
+      if (looksLikeAdNode(node)) node.remove();
+    });
+  }
+
+  window.adsbygoogle = window.adsbygoogle || [];
+  if (typeof window.adsbygoogle.push !== "function") {
+    window.adsbygoogle.push = function() { return 0; };
+  }
+
+  window.adConfig = window.adConfig || function() {};
+  window.adBreak = window.adBreak || function(config) {
+    try { if (config && typeof config.beforeAd === "function") config.beforeAd(); } catch (error) {}
+    try { if (config && typeof config.afterAd === "function") config.afterAd(); } catch (error) {}
+    try { if (config && typeof config.adBreakDone === "function") config.adBreakDone(); } catch (error) {}
+    return {};
+  };
+
+  const originalOpen = window.open;
+  window.open = function(url, ...args) {
+    if (isBlockedUrl(url)) return null;
+    return originalOpen.call(window, url, ...args);
+  };
+
+  const observer = new MutationObserver(mutations => {
+    mutations.forEach(mutation => {
+      mutation.addedNodes.forEach(node => {
+        if (!(node instanceof Element)) return;
+        if (looksLikeAdNode(node)) {
+          node.remove();
+          return;
+        }
+        scrub(node);
+      });
+    });
+  });
+
+  if (document.documentElement) {
+    scrub(document);
+    observer.observe(document.documentElement, { childList: true, subtree: true });
+  } else {
+    document.addEventListener("DOMContentLoaded", () => {
+      scrub(document);
+      observer.observe(document.documentElement, { childList: true, subtree: true });
+    }, { once: true });
+  }
+})();</script><style data-cmx="ad-block-style">.adsbygoogle,
+[data-ad-client],
+[data-ad-slot],
+[data-ad-region],
+iframe[src*='doubleclick.net'],
+iframe[src*='googlesyndication.com'],
+iframe[src*='googleadservices.com'],
+iframe[src*='googletagmanager.com'],
+iframe[src*='adnxs.com'],
+iframe[src*='taboola.com'],
+iframe[src*='outbrain.com'],
+iframe[src*='adinplay.com'],
+iframe[src*='intergient.com'],
+script[src*='doubleclick.net'],
+script[src*='googlesyndication.com'],
+script[src*='googleadservices.com'],
+script[src*='googletagmanager.com'],
+script[src*='google-analytics.com'],
+script[src*='analytics.google.com'],
+script[src*='adnxs.com'],
+script[src*='taboola.com'],
+script[src*='outbrain.com'],
+script[src*='adinplay.com'],
+script[src*='intergient.com'],
+script[src*='playwire.com'],
+script[src*='nitropay.com'],
+script[src*='cloudflareinsights.com'],
+ins.adsbygoogle,
+[id*='google_ads'],
+[id*='ad-slot'],
+[class*='ad-slot'],
+[id*='taboola'],
+[class*='taboola'],
+[id*='outbrain'],
+[class*='outbrain'],
+[id*='playwire'],
+[class*='playwire'],
+[id*='snigel'],
+[class*='snigel'],
+[id*='adinplay'],
+[class*='adinplay'] { display: none !important; visibility: hidden !important; pointer-events: none !important; }</style>
+<meta charset="utf-8">
+<title>Trombone Champion</title>
+<style>
+html,body{margin:0;padding:0;width:100%;height:100%;background:#000;overflow:hidden}
+#unityContainer{position:fixed;top:0;left:0;width:100vw;height:100vh;background:#000}
+#unityContainer canvas{display:block;width:100%!important;height:100%!important;outline:none}
+</style>
+<meta property="og:title" content="Trombone Champion"><link rel="icon" href="https://cdn.jsdelivr.net/gh/freebuisness/covers@main/855.png"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/freebuisness/covers@main/855.png"></head>
+<body>
+<div id="unityContainer"></div>
+<script>
+(function(){
+  var CHUNKED = {
+    'Build/web.data.unityweb': 6,
+    'Build/web.wasm.code.unityweb': 4
+  };
+  var blobUrls = {};
+
+  function fetchArrayBuffer(url){
+    return fetch(url).then(function(r){
+      if(!r.ok) throw new Error('HTTP '+r.status+' '+url);
+      return r.arrayBuffer();
+    });
+  }
+
+  function buildChunkedBlob(relPath, count){
+    var parts = [];
+    for(var i=0; i<count; i++){
+      parts.push(relPath + (i<10?'0':'') + i);
+    }
+    return Promise.all(parts.map(fetchArrayBuffer))
+      .then(function(bufs){
+        return URL.createObjectURL(new Blob(bufs, {type:'application/octet-stream'}));
+      });
+  }
+
+  function rewrite(url){
+    if(typeof url !== 'string') return url;
+    var u = url;
+    if(u.indexOf('://') === -1 && u.charAt(0) === '/') u = u.slice(1);
+    for(var key in CHUNKED){
+      if(u.indexOf(key) !== -1 && blobUrls[key]) return blobUrls[key];
+    }
+    return url;
+  }
+
+  var origOpen = XMLHttpRequest.prototype.open;
+  XMLHttpRequest.prototype.open = function(method, url){
+    var args = Array.prototype.slice.call(arguments);
+    args[1] = rewrite(url);
+    return origOpen.apply(this, args);
+  };
+  var origFetch = window.fetch;
+  window.fetch = function(input, init){
+    if(typeof input === 'string'){
+      input = rewrite(input);
+    } else if(input && input.url){
+      var ru = rewrite(input.url);
+      if(ru !== input.url) input = new Request(ru, input);
+    }
+    return origFetch.call(this, input, init);
+  };
+
+  var jobs = Object.keys(CHUNKED).map(function(k){
+    return buildChunkedBlob(k, CHUNKED[k]).then(function(u){ blobUrls[k] = u; });
+  });
+
+  Promise.all(jobs).then(function(){
+    var s = document.createElement('script');
+    s.src = 'Build/UnityLoader.js';
+    s.onload = function(){ UnityLoader.instantiate('unityContainer', 'Build/web.json'); };
+    document.head.appendChild(s);
+  }).catch(function(e){
+    document.body.innerHTML += '<pre style="color:#f88;padding:20px">Load error: '+e.message+'</pre>';
+  });
+})();
+</script>
+
+</body></html>
