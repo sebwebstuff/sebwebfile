@@ -78,7 +78,7 @@ async function openEaglercraft188() {
     try {
         // Download the HTML source
         const response = await fetch(
-            "https://cdn.jsdelivr.net/gh/sebwebstuff/eaglercraft-1.8.8/index.html"
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/eaglercraft-1.8.8/index.html"
         );
 
         if (!response.ok) {
@@ -89,7 +89,7 @@ async function openEaglercraft188() {
 
         // Make relative files load from the game folder
         const baseURL =
-            "https://cdn.jsdelivr.net/gh/sebwebstuff/eaglercraft-1.8.8/";
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/eaglercraft-1.8.8/";
 
         if (!/<base\s/i.test(html)) {
             html = html.replace(
@@ -137,7 +137,7 @@ async function openEaglercraft1122() {
     try {
         // Download the HTML source
         const response = await fetch(
-            "https://cdn.jsdelivr.net/gh/sebwebstuff/eaglecraft-1.12.2/index.html"
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/eaglecraft-1.12.2/index.html"
         );
 
         if (!response.ok) {
@@ -148,7 +148,7 @@ async function openEaglercraft1122() {
 
         // Make relative files load from the game folder
         const baseURL =
-            "https://cdn.jsdelivr.net/gh/sebwebstuff/eaglecraft-1.12.2/";
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/eaglecraft-1.12.2/";
 
         if (!/<base\s/i.test(html)) {
             html = html.replace(
@@ -195,7 +195,7 @@ async function openSlowRoads() {
     try {
         // Download the HTML source
         const response = await fetch(
-            "https://cdn.jsdelivr.net/gh/sebwebstuff/slow-roads/index.html"
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/slow-roads/index.html"
         );
 
         if (!response.ok) {
@@ -206,7 +206,7 @@ async function openSlowRoads() {
 
         // Make relative files load from the game folder
         const baseURL =
-            "https://cdn.jsdelivr.net/gh/sebwebstuff/slow-roads/";
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/slow-roads/";
 
         if (!/<base\s/i.test(html)) {
             html = html.replace(
@@ -253,7 +253,7 @@ async function openTag() {
     try {
         // Download the HTML source
         const response = await fetch(
-            "https://cdn.jsdelivr.net/gh/sebwebstuff/tag/index.html"
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/tag/index.html"
         );
 
         if (!response.ok) {
@@ -264,7 +264,7 @@ async function openTag() {
 
         // Make relative files load from the game folder
         const baseURL =
-            "https://cdn.jsdelivr.net/gh/sebwebstuff/tag/";
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/tag/";
 
         if (!/<base\s/i.test(html)) {
             html = html.replace(
