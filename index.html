@@ -1,0 +1,4062 @@
+<html>
+
+<head>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/games/games-style.css"> 
+
+<!-- Quicksand Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<br>
+
+<div class="show-button">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+     fill="currentColor"
+     stroke="currentColor"
+     stroke-width="1">
+  <path fill-rule="evenodd" d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75ZM2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 10Zm0 5.25a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+</svg>
+</div>
+
+
+<div class="left-rectangle">
+
+
+  <a href="../">
+<div class="home-button">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+  <path fill-rule="evenodd" d="M9.293 2.293a1 1 0 0 1 1.414 0l7 7A1 1 0 0 1 17 11h-1v6a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6H3a1 1 0 0 1-.707-1.707l7-7Z" clip-rule="evenodd" />
+</svg>
+</div>
+</a>
+
+<div class="hide-button">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+     fill="currentColor"
+     stroke="currentColor"
+     stroke-width="1">
+  <path fill-rule="evenodd" d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75ZM2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 10Zm0 5.25a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+</svg>
+</div>
+
+
+</div>
+
+
+<div class="images-container">
+
+
+
+<!-- Row 1 -->
+
+<div class="image-row row-1">
+
+
+<!-- Eaglercraft 1.8.8 -->
+<div class="image-container" onclick="openEaglercraft188()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/eaglercraft.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bad-fade.png">
+    <div class="image-text">Eaglercraft 1.8.8</div>
+</div>
+
+<script>
+async function openEaglercraft188() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/eaglercraft-1.8.8/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/eaglercraft-1.8.8/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Eaglercraft 1.8.8 End -->
+
+
+
+<!-- Eaglercraft 1.12.2 -->
+<div class="image-container" onclick="openEaglercraft1122()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/eaglercraft.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bad-fade.png">
+    <div class="image-text">Eaglercraft 1.8.8</div>
+</div>
+
+<script>
+async function openEaglercraft1122() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/eaglecraft-1.12.2/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/eaglecraft-1.12.2/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Eaglercraft 1.12.2 End -->
+
+
+<!-- Slow Roads -->
+<div class="image-container" onclick="openSlowRoads()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/slow-roads.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Slow Roads</div>
+</div>
+
+<script>
+async function openSlowRoads() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/slow-roads/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/slow-roads/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Slow Roads End -->
+
+
+<!-- Tag -->
+<div class="image-container" onclick="openTag()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/tag.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bad-fade.png">
+    <div class="image-text">Tag</div>
+</div>
+
+<script>
+async function openTag() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/tag/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/tag/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Tag End -->
+
+
+
+<!-- Tag 2 -->
+<div class="image-container" onclick="openTag2()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/tag-2.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Tag 2</div>
+</div>
+
+<script>
+async function openTag2() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/tag-2/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/tag-2/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Tag End -->
+
+
+<!-- Space Waves -->
+<div class="image-container" onclick="openSpaceWaves()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/space-waves.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bad-fade.png">
+    <div class="image-text">Space Waves</div>
+</div>
+
+<script>
+async function openSpaceWaves() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/space-waves/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/space-waves/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Space Waves End -->
+
+</div>
+
+
+<!-- Row 2 -->
+
+<div class="image-row row-2">
+
+
+<!-- Super Mario 64 -->
+<div class="image-container" onclick="openSuperMario64()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/super-mario-64.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Super Mario 64</div>
+</div>
+
+<script>
+async function openSuperMario64() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/super-mario-64/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/super-mario-64/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Super Mario 64 End -->
+
+
+<!-- Time Shooter 2 -->
+<div class="image-container" onclick="openTimeShooter2()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/time-shooter-2.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bad-fade.png">
+    <div class="image-text">Time Shooter 2</div>
+</div>
+
+<script>
+async function openTimeShooter2() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/time-shooter-2/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/time-shooter-2/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Time Shooter 2 End -->
+
+
+<!-- Time Shooter 3 -->
+<div class="image-container" onclick="openTimeShooter3()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/time-shooter-3.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Time Shooter 3</div>
+</div>
+
+<script>
+async function openTimeShooter3() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/time-shooter-3/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/time-shooter-3/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Time Shooter 3 End -->
+
+
+<!-- Hollow Knight -->
+<div class="image-container" onclick="openHollowKnight()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/hollow-knight.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Hollow Knight</div>
+</div>
+
+<script>
+async function openHollowKnight() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/hollow-knight/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/hollow-knight/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Hollow Knight End -->
+
+
+<!-- House Of Hazards -->
+<div class="image-container" onclick="openHouseOfHazards()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/house-of-hazards.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">House Of Hazards</div>
+</div>
+
+<script>
+async function openHouseOfHazards() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/house-of-hazards/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/house-of-hazards/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- House Of Hazards End -->
+
+
+<!-- Sort The Court -->
+<div class="image-container" onclick="openSortTheCourt()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/sort-the-court.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Sort The Court</div>
+</div>
+
+<script>
+async function openSortTheCourt() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/sort-the-court/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/sort-the-court/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Sort The Court End -->
+
+
+</div>
+
+
+<!-- Row 3 -->
+
+<div class="image-row row-1">
+
+
+<!-- Drive Mad -->
+<div class="image-container" onclick="openDriveMad()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/drive-mad.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Drive Mad</div>
+</div>
+
+<script>
+async function openDriveMad() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/drive-mad/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/drive-mad/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Drive Mad End -->
+
+
+
+<!-- Gobble -->
+<div class="image-container" onclick="openGobble()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/gobble.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Gobble</div>
+</div>
+
+<script>
+async function openGobble() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/gobble/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/gobble/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Gobble End -->
+
+
+<!-- Recoil -->
+<a href="https://script.google.com/macros/s/AKfycbwSXaWfZj0nYbbTfmLjKpG6JYa1gFE1Sp_Z_WRdLDiFAWFwGdp0Wma7x3p89PvimZpmzA/exec">
+<div class="image-container">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/recoil.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+<div class="image-text">Recoil</div>
+</div>
+</a>
+
+
+<!-- Roper -->
+<div class="image-container" onclick="openRoper()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/roper.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Roper</div>
+</div>
+
+<script>
+async function openRoper() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/roper/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/roper/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Roper End -->
+
+
+<!-- Level Devil -->
+<a href="https://script.google.com/macros/s/AKfycbxuv0QHDrzSIABQa0ashiZFmtHTMPwHV2rAgq5qYBPnbBcGgvUE9PaYLqj81dLFVFda/exec">
+<div class="image-container">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/level-devil.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+<div class="image-text">Level Devil</div>
+</div>
+</a>
+
+
+<!-- Ragdoll Archers -->
+<div class="image-container" onclick="openRagdollArchers()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/ragdoll-archers.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Ragdoll Archers</div>
+</div>
+
+<script>
+async function openRagdollArchers() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/ragdoll-archers/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/ragdoll-archers/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Ragdoll Archers End -->
+
+
+</div>
+
+
+
+
+<!-- Row 4 -->
+
+<div class="image-row row-2">
+
+
+<!-- Big Tower Tiny Square -->
+<a href="https://script.google.com/macros/s/AKfycbyZwYVi25wTZPh3xidakHZSMhp3v76fnzv8MEAnEVxZQJu2eO9J_R4ziEMgwuDyr9uD/exec">
+<div class="image-container">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/big-tower-tiny-square.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+<div class="image-text">Big Tower Tiny Square</div>
+</div>
+</a>
+
+
+<!-- Big Tower Tiny Square 2 -->
+<a href="https://script.google.com/macros/s/AKfycbzgeWKCh9J5637eEedWIJrSIYXghzCZ6FtE8Z2JD1rmqDe4twTmCY7qixgoWLLc1qfJrg/exec">
+<div class="image-container">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/big-tower-tiny-square-2.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+
+<div class="image-text">Big Tower Tiny Square 2</div>
+</div>
+</a>
+
+
+<!-- Big ICE Tower Tiny Square -->
+<a href="https://script.google.com/macros/s/AKfycbzvumnAEGBAkooc-LjKTnbpnHPHHbdOnVo3H6gGXM5DFBaqmItLicPm2MwbLE28szvW/exec">
+<div class="image-container">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/big-ice-tower-tiny-square.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+<div class="image-text">Big ICE Tower Tiny Square</div>
+</div>
+</a>
+
+
+<!-- Big NEON Tower Tiny Square -->
+<a href="https://script.google.com/macros/s/AKfycbxhDpmeThW-RkNZvjSwajXa7INd2vTXIuQnGeEgCeD1OHgiXjSdtSSdU3GzzOgTUHts5Q/exec">
+<div class="image-container">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/big-neon-tower-tiny-square.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+<div class="image-text">Big NEON Tower Tiny Square</div>
+</div>
+</a>
+
+
+
+<!-- Big FLAPPY Tower Tiny Square -->
+<div class="image-container" onclick="openBigFlappyTowerTinySquare()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/big-flappy-tower-tiny-square.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bad-fade.png">
+    <div class="image-text">Big FLAPPY Tower Tiny Square</div>
+</div>
+
+<script>
+async function openBigFlappyTowerTinySquare() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/big-flappy-tower-tiny-sqaure/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/big-flappy-tower-tiny-square/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Big FLAPPY Tower Tiny Square End -->
+
+
+<!-- Gladihoppers -->
+<div class="image-container" onclick="openGladihoppers()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/gladihoppers.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bad-fade.png">
+    <div class="image-text">Gladihoppers</div>
+</div>
+
+<script>
+async function openGladihoppers() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/gladihoppers/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/gladihoppers/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Gladihoppers End -->
+
+
+</div>
+
+
+
+<!-- Row 5 -->
+
+<div class="image-row row-1">
+
+
+<!-- OvO -->
+<a href="https://script.google.com/macros/s/AKfycbzUQuuXMOFwEnVX0kO33dnVB2S0KW5FOaPJSUse2mPjtiwawM1FxIg25GoHL6j1ld_6yQ/exec">
+  <div class="image-container">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/ovo.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">OvO</div>
+  </div>
+</a>
+
+
+
+<!-- OvO 2 -->
+<a href="https://script.google.com/macros/s/AKfycbxRc2mLPfewq54kfBPEggJJtSs0EqakNAHgo654liN-c0H9ZU2EBAOiNn2shhVeCAfP/exec">
+<div class="image-container">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/ovo-2.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">OvO 2</div>
+</div>
+</a>
+
+
+<!-- Hover Racer Drive -->
+<a href="https://script.google.com/macros/s/AKfycbwUg6F3a9Aan7DghSJ4fz1xS4Q4uMT9HDhEmF7AcfDM3rBQT1bC_IdraKe1tBAfbWQLaA/exec">
+<div class="image-container">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/hover-racer-drive.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+<div class="image-text">Hover Racer Drive</div>
+</div>
+</a>
+
+
+<!-- Slime Rancher -->
+<div class="image-container" onclick="openSlimeRancher()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/slime-rancher.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Slime Rancher</div>
+</div>
+
+<script>
+async function openSlimeRancher() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/slime-rancher/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/slime-rancher/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Slime Rancher End -->
+
+
+<!-- Baldi's Basics -->
+<div class="image-container" onclick="openBaldisBasics()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/baldis-basics.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bad-fade.png">
+    <div class="image-text">Baldi's Basics</div>
+</div>
+
+<script>
+async function openBaldisBasics() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/baldis-basics/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/baldis-basics/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Baldi's Basics End -->
+
+
+<!-- Baldi's Basics Plus -->
+<div class="image-container" onclick="openBaldisBasicsPlus()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/baldis-basics-plus.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Baldi's Basics Plus</div>
+</div>
+
+<script>
+async function openBaldisBasicsPlus() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/baldis-basics-plus/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/baldis-basics-plus/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Baldi's Basics Plus End -->
+
+
+</div>
+
+
+
+<!-- Row 6 -->
+
+<div class="image-row row-2">
+
+
+<!-- Ducklings.io -->
+<div class="image-container" onclick="openDucklingsio()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/ducklings-io.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Ducklings.io</div>
+</div>
+
+<script>
+async function openDucklingsio() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/ducklings.io/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/ducklings.io/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Ducklings.io End -->
+
+
+<!-- Superhot -->
+<div class="image-container" onclick="openSuperhot()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/superhot.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Superhot</div>
+</div>
+
+<script>
+async function openSuperhot() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/superhot/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/superhot/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Superhot End -->
+
+
+<!-- Gunspin -->
+<a href="https://script.google.com/macros/s/AKfycbysqNeV2qcGYx8JkSOKy1AchYhtfdu9163TBVFYazaJEW0x0-KKTYStBc1CPfBBKNMm/exec">
+<div class="image-container">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/gunspin.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+<div class="image-text">Gunspin</div>
+</div>
+</a>
+
+
+<!-- Buckshot Roulette -->
+<a href="../buckshot-roulette/index.html">
+<div class="image-container">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/buckshot-roulette.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bad-fade.png">
+<div class="image-text">Buckshot Roulette</div>
+</div>
+</a>
+
+
+
+<!-- Cuphead -->
+<div class="image-container" onclick="openCuphead()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/cuphead.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Cuphead</div>
+</div>
+
+<script>
+async function openCuphead() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/cuphead/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/cuphead/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Cuphead End -->
+
+
+<!-- Crossy -->
+<a href="https://script.google.com/macros/s/AKfycbzYjjkzAlGAyg3cnFAsAaK6oud9pIx9S-ASfjU_zjGoFA94pnJAWVMGmwj7Dup8herf/exec">
+<div class="image-container">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/crossy-road.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+<div class="image-text">Crossy Road</div>
+</div>
+</a>
+
+
+</div>
+
+
+
+<!-- Row 7 -->
+
+<div class="image-row row-1">
+
+
+<!-- Poly Track -->
+<div class="image-container" onclick="openPolytrack()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/polytrack.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bad-fade.png">
+    <div class="image-text">Polytrack</div>
+</div>
+
+<script>
+async function openPolytrack() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/polytrack/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/polytrack/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Polytrack End -->
+
+
+
+<!-- Monkey Mart -->
+<div class="image-container" onclick="openMonkeyMart()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/monkey-mart.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Monkey Mart</div>
+</div>
+
+<script>
+async function openMonkeyMart() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/monkey-mart/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/monkey-mart/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Monkey Mart End -->
+
+
+<!-- Terraria -->
+<div class="image-container" onclick="openTerraria()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/terraria.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Terraria</div>
+</div>
+
+<script>
+async function openTerraria() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/terraria/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/terraria/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Terraria End -->
+
+
+<!-- Stickman Hook -->
+<div class="image-container" onclick="openStickmanHook()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/stickman-hook.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Stickman Hook</div>
+</div>
+
+<script>
+async function openStickmanHook() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/stickman-hook/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/stickman-hook/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Stickman Hook End -->
+
+
+<!-- Tiny Fishing -->
+<div class="image-container" onclick="openTinyFishing()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/tiny-fishing.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bad-fade.png">
+    <div class="image-text">Tiny Fishing</div>
+</div>
+
+<script>
+async function openTinyFishing() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/tiny-fishing/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/tiny-fishing/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Tiny Fishing End -->
+
+
+<!-- Tomb Of The Mask -->
+<div class="image-container" onclick="openTombOfTheMask()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/tomb-of-the-mask.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Tomb Of The Mask</div>
+</div>
+
+<script>
+async function openTombOfTheMask() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/tomb-of-the-mask/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/tomb-of-the-mask/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Tomb Of The Mask End -->
+
+
+</div>
+
+
+<!-- Row 8 -->
+
+<div class="image-row row-2">
+
+
+
+
+<!-- Basket Random -->
+<a href="https://script.google.com/macros/s/AKfycbwIvR4B4fxclRkRitwyjM9U1sXPjo7WKQNLa0I2JnAYVD5YD9uFaXS_XjJmPZ-lz5IjIw/exec">
+<div class="image-container">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/basket-random.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+<div class="image-text">Basket Random</div>
+</div>
+</a>
+
+
+<!-- Soccer Random -->
+<div class="image-container" onclick="openSoccerRandom()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/soccer-random.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bad-fade.png">
+    <div class="image-text">Soccer Random</div>
+</div>
+
+<script>
+async function openSoccerRandom() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/soccer-random/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/soccer-random/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Soccer Random End -->
+
+
+<!-- Volley Random -->
+<div class="image-container" onclick="openVolleyRandom()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/volley-random.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bad-fade.png">
+    <div class="image-text">Volley Random</div>
+</div>
+
+<script>
+async function openVolleyRandom() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/volley-random/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/volley-random/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Volley Random End -->
+
+
+<!-- Boxing Random -->
+<div class="image-container" onclick="openBoxingRandom()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/boxing-random.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bad-fade.png">
+    <div class="image-text">Boxing Random</div>
+</div>
+
+<script>
+async function openBoxingRandom() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/boxing-random/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/boxing-random/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Boxing Random End -->
+
+
+<!-- Rooftop Snipers -->
+<div class="image-container" onclick="openRooftopSnipers()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/rooftop-snipers.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Rooftop Snipers</div>
+</div>
+
+<script>
+async function openRooftopSnipers() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/rooftop-snipers/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/rooftop-snipers/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Rooftop Snipers End -->
+
+
+<!-- Janissary Battles -->
+<div class="image-container" onclick="openJanissaryBattles()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/janissary-battles.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bad-fade.png">
+    <div class="image-text">Janissary Battles</div>
+</div>
+
+<script>
+async function openJanissaryBattles() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/janissary-battles/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/janissary-battles/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Janissary Battles End -->
+
+
+
+</div>
+
+
+
+<!-- Row 9 -->
+
+<div class="image-row row-1">
+
+
+<!-- Brotato -->
+<div class="image-container" onclick="openBrotato()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/brotato.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bad-fade.png">
+    <div class="image-text">Brotato</div>
+</div>
+
+<script>
+async function openBrotato() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/brotato/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/brotato/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Brotato End -->
+
+
+
+<!-- CloverPit -->
+<div class="image-container" onclick="openCloverpit()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/cloverpit.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">CloverPit</div>
+</div>
+
+<script>
+async function openCloverpit() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/cloverpit/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/cloverpit/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- CloverPit End -->
+
+
+<!-- Balatro -->
+<div class="image-container" onclick="openBalatro()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/balatro.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Balatro</div>
+</div>
+
+<script>
+async function openBalatro() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/balatro/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/balatro/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Balatro End -->
+
+
+<!-- Adventure Capitalist -->
+<div class="image-container" onclick="openAdventureCapitalist()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/adventure-capitalist.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Adventure Capitalist</div>
+</div>
+
+<script>
+async function openAdventureCapitalist() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/adventure-capitalist/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/adventure-capitalist/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Adventure Capitalist End -->
+
+
+<!-- Breadskate Forever -->
+<div class="image-container" onclick="openBreadskateForever()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/breadskate-forever.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bad-fade.png">
+    <div class="image-text">Breadskate Forever</div>
+</div>
+
+<script>
+async function openBreadskateForever() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/breadskate-forever/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/breadskate-forever/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Breadskate Forever End -->
+
+
+<!-- Smash Karts -->
+<div class="image-container" onclick="openSmashKarts()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/smash-karts.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Smash Karts</div>
+</div>
+
+<script>
+async function openSmashKarts() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/smash-karts/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/smash-karts/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Smash Karts End -->
+
+
+</div>
+
+
+
+
+<!-- Row 10 -->
+
+<div class="image-row row-2">
+
+
+
+<!-- Snow Rider 3D -->
+<div class="image-container" onclick="openSnowRider3D()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/snow-rider-3d.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Snow Rider 3D</div>
+</div>
+
+<script>
+async function openSnowRider3D() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/snow-rider-3d/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/snow-rider-3d/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Snow Rider 3D End -->
+
+
+<!-- Pikwip -->
+<div class="image-container" onclick="openPikwip()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/pikwip.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Pikwip</div>
+</div>
+
+<script>
+async function openPikwip() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/pikwip/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/pikwip/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Pikwip End -->
+
+
+<!-- Gun Knight -->
+<div class="image-container" onclick="openGunKnight()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/gun-knight.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Gun Knight</div>
+</div>
+
+<script>
+async function openGunKnight() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/gun-knight/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/gun-knight/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Gun Knight End -->
+
+
+<!-- Kour.io -->
+<div class="image-container" onclick="openKourio()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/kour-io.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Kour.io</div>
+</div>
+
+<script>
+async function openKourio() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/kour.io/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/kour.io/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Kour.io End -->
+
+
+<!-- Swingo -->
+<div class="image-container" onclick="openSwingo()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/swingo.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bad-fade.png">
+    <div class="image-text">Swingo</div>
+</div>
+
+<script>
+async function openSwingo() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/swingo/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/swingo/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Swingo End -->
+
+
+<!-- Blumgi Slime -->
+<div class="image-container" onclick="openBlumgiSlime()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/blumgi-slime.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bad-fade.png">
+    <div class="image-text">Blumgi Slime</div>
+</div>
+
+<script>
+async function openBlumgiSlime() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/blumgi-slime/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/blumgi-slime/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Blumgi Slime End -->
+
+
+
+
+</div>
+
+
+
+
+<!-- Row 11 -->
+
+<div class="image-row row-1">
+
+
+<!-- Escape Road -->
+<div class="image-container" onclick="openEscapeRoad()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/escape-road.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Escape Road</div>
+</div>
+
+<script>
+async function openEscapeRoad() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/escape-road/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/escape-road/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Escape Road End -->
+
+
+<!-- Escape Road 2 -->
+<div class="image-container" onclick="openEscapeRoad2()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/escape-road-2.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Escape Road 2</div>
+</div>
+
+<script>
+async function openEscapeRoad2() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/escape-road-2/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/escape-road-2/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Escape Road 2 End -->
+
+
+<!-- Dire Decks -->
+<div class="image-container" onclick="openDireDecks()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/dire-decks.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Dire Decks</div>
+</div>
+
+<script>
+async function openDireDecks() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/dire-decks/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/dire-decks/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Dire Decks End -->
+
+
+<!-- HELP! NO BRAKES -->
+<div class="image-container" onclick="openHelpNoBrakes()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/help-no-brake.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bad-fade.png">
+    <div class="image-text">HELP! NO BRAKES</div>
+</div>
+
+<script>
+async function openHelpNoBrakes() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/help-no-brake/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/help-no-brakes/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- HELP! NO BRAKES End -->
+
+
+<!-- Disc Us -->
+<div class="image-container" onclick="openDiscUs()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/disc-us.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bad-fade.png">
+    <div class="image-text">Disc Us</div>
+</div>
+
+<script>
+async function openDiscUs() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/disc-us/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/disc-us/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Disc Us End -->
+
+
+<!-- Scritchy Scratchy -->
+<div class="image-container" onclick="openScritchyScratchy()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/scritchy-scratchy.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bad-fade.png">
+    <div class="image-text">Scritchy Scratchy</div>
+</div>
+
+<script>
+async function openScritchyScratchy() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/scritchy-scratchy/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/scritchy-scratchy/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Scritchy Scratchy End -->
+
+
+</div>
+
+
+
+
+<!-- Row 12 -->
+
+<div class="image-row row-2">
+
+
+<!-- Terraforma -->
+<div class="image-container" onclick="openTerraforma()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/terraforma.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bad-fade.png">
+    <div class="image-text">Terraforma</div>
+</div>
+
+<script>
+async function openTerraforma() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/terraforma/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/terraforma/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Terraforma End -->
+
+
+<!-- Birb -->
+<div class="image-container" onclick="openBirb()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/birb.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Birb</div>
+</div>
+
+<script>
+async function openBirb() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/birb/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/birb/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Birb End -->
+
+
+<!-- Paper.io 2 -->
+<a href="https://script.google.com/macros/s/AKfycbwuq4eI9d5aEsioa4C6UzFuD3uehnmuuCQZ4YS3VSoOquBdZ7IhKOlz0CQzIeUgqAdK/exec">
+<div class="image-container">
+<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/paper-io-2.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+<div class="image-text">Paper.io 2</div>
+</div>
+</a>
+
+
+<!-- Duck Life 6 -->
+<div class="image-container" onclick="openDuckLife6()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/duck-life-6.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Duck Life 6</div>
+</div>
+
+<script>
+async function openDuckLife6() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/duck-life-6/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/duck-life-6.png/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Duck Life 6 End -->
+
+
+<!-- Duck Life 7 -->
+<div class="image-container" onclick="openDuckLife7()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/duck-life-7.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Duck Life 7</div>
+</div>
+
+<script>
+async function openDuckLife7() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/duck-life-7/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/duck-life-7/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Duck Life 7 End -->
+
+
+<!-- Duck Life 8 -->
+<div class="image-container" onclick="openDuckLife8()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/duck-life-8.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Duck Life 8</div>
+</div>
+
+<script>
+async function openDuckLife8() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/duck-life-8/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/duck-life-8/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Duck Life 8 End -->
+
+
+</div>
+
+
+<!-- Row 13 -->
+
+<div class="image-row row-1">
+
+
+<!-- Cookie Clicker -->
+<div class="image-container" onclick="openCookieClicker()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/cookie-clicker.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Cookie Clicker</div>
+</div>
+
+<script>
+async function openCookieClicker() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/cookie-clicker/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/cookie-clicker/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Cookie Clicker End -->
+
+
+<!-- Among Us -->
+<div class="image-container" onclick="openAmongUs()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/among-us.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Among Us</div>
+</div>
+
+<script>
+async function openAmongUs() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/among-us/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/among-us/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Among Us End -->
+
+
+<!-- Retro Bowl -->
+<div class="image-container" onclick="openRetroBowl()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/retro-bowl.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bad-fade.png">
+    <div class="image-text">Retro Bowl</div>
+</div>
+
+<script>
+async function openRetroBowl() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/retro-bowl/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/retro-bowl/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Retro Bowl End -->
+
+
+<!-- Peak -->
+<div class="image-container" onclick="openPeak()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/peak.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Peak</div>
+</div>
+
+<script>
+async function openPeak() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/peak/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/peak/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Peak End -->
+
+
+
+<!-- Clustertruck -->
+<div class="image-container" onclick="openClustertruck()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/clustertruck.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Clustertruck</div>
+</div>
+
+<script>
+async function openClustertruck() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/clustertruck/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/clustertruck/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Clustertruck End -->
+
+
+<!-- Trombone Champ -->
+<div class="image-container" onclick="openTromboneChamp()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/trombone-champ.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Trombone Champ</div>
+</div>
+
+<script>
+async function openTromboneChamp() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/trombone-champ/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile@latest/trombone-champ/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Trombone Champ End -->
+
+
+</div>
+
+
+<!-- Hide Button Script -->
+<script>
+const leftRectangle = document.querySelector('.left-rectangle');
+const hideButton = document.querySelector('.hide-button');
+const showButton = document.querySelector('.show-button');
+
+hideButton.addEventListener('click', () => {
+    leftRectangle.classList.add('hidden');
+    document.body.classList.add('sidebar-hidden');
+});
+
+showButton.addEventListener('click', () => {
+    leftRectangle.classList.remove('hidden');
+    document.body.classList.remove('sidebar-hidden');
+});
+</script>
+
+
+
+
+
+</body>
+
+</html>
