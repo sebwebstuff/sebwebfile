@@ -137,7 +137,7 @@ async function openEaglercraft1122() {
     try {
         // Download the HTML source
         const response = await fetch(
-            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/eaglecraft-1.12.2/index.html"
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/eaglercraft-1.12.2/index.html"
         );
 
         if (!response.ok) {
@@ -148,7 +148,7 @@ async function openEaglercraft1122() {
 
         // Make relative files load from the game folder
         const baseURL =
-            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/eaglecraft-1.12.2/";
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/eaglercraft-1.12.2/";
 
         if (!/<base\s/i.test(html)) {
             html = html.replace(
