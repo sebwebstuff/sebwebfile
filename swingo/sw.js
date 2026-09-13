@@ -1,2 +1,1 @@
-// No Service Worker
-console.log("No Service Worker")
+No Content: https://jasongamesdev.github.io/swingo/sw.js

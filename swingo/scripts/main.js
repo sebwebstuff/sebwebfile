@@ -352,7 +352,7 @@ globalThis.WebSdkWrapper = (function () {
 	  get sdk() {
 		return globalThis.PokiSDK;
 	  },
-	  scriptSrc: "patch/js/poki-sdk.js",
+	  scriptSrc: "patch/poki-sdk.js",
 	  hasAds: true,
 	  hasBanner: false,
 	  enableOnlyInProduction: false,
@@ -419,7 +419,7 @@ globalThis.WebSdkWrapper = (function () {
 	  get sdk() {
 		return globalThis.FBInstant;
 	  },
-	  scriptSrc: "patch/js/null.js?connect.facebook.net/en_US/sdk.js",
+	  scriptSrc: "/patch/js/null.js?connect.facebook.net/en_US/sdk.js",
 	  hasAds: true,
 	  hasBanner: true,
 	  enableOnlyInProduction: true,
