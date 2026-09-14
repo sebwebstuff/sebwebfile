@@ -1610,14 +1610,62 @@ async function openCuphead() {
 <!-- Cuphead End -->
 
 
-<!-- Crossy -->
-<a href="https://script.google.com/macros/s/AKfycbzYjjkzAlGAyg3cnFAsAaK6oud9pIx9S-ASfjU_zjGoFA94pnJAWVMGmwj7Dup8herf/exec">
-<div class="image-container">
-<img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/crossy-road.png">
-    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
-<div class="image-text">Crossy Road</div>
+<!-- Crossy Road -->
+<div class="image-container" onclick="openCrossyRoad()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/crossy-road.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bad-fade.png">
+    <div class="image-text">Crossy Road</div>
 </div>
-</a>
+
+<script>
+async function openCrossyRoad() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/crossy-road/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Game HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the game folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/crossy-road/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Game</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<!-- Crossy Road End -->
 
 
 </div>
@@ -3800,15 +3848,15 @@ async function openTromboneChamp() {
 <!-- Trombone Champ End -->
 
 
-<!-- Placeholder -->
-<div class="image-container" onclick="openPlaceholder()" style="cursor: pointer;">
-    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/placeholder.png">
-    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bad-fade.png">
-    <div class="image-text">PLACEHOLDER</div>
+<!-- Animals Volleyball -->
+<div class="image-container" onclick="openAnimalsVolleyball()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/aniamls-volleyball.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Animals Volleyball</div>
 </div>
 
 <script>
-async function openPlaceholder() {
+async function openAnimalsVolleyball() {
     // Open the about:blank tab immediately
     const win = window.open("about:blank", "_blank");
 
@@ -3820,7 +3868,7 @@ async function openPlaceholder() {
     try {
         // Download the HTML source
         const response = await fetch(
-            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/placeholder/index.html"
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/animals-volleyball/index.html"
         );
 
         if (!response.ok) {
@@ -3831,7 +3879,7 @@ async function openPlaceholder() {
 
         // Make relative files load from the game folder
         const baseURL =
-            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/placeholder/";
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/animals-volleyball/";
 
         if (!/<base\s/i.test(html)) {
             html = html.replace(
@@ -3855,18 +3903,18 @@ async function openPlaceholder() {
 }
 </script>
 
-<!-- Placeholder End -->
+<!-- Animals Volleyball End -->
 
 
-<!-- Placeholder -->
-<div class="image-container" onclick="openPlaceholder()" style="cursor: pointer;">
-    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/placeholder.png">
-    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bad-fade.png">
-    <div class="image-text">PLACEHOLDER</div>
+<!-- Choppy Orc -->
+<div class="image-container" onclick="openChoppyOrc()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/choppy-orc.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Choppy Orc</div>
 </div>
 
 <script>
-async function openPlaceholder() {
+async function openChoppyOrc() {
     // Open the about:blank tab immediately
     const win = window.open("about:blank", "_blank");
 
@@ -3878,7 +3926,7 @@ async function openPlaceholder() {
     try {
         // Download the HTML source
         const response = await fetch(
-            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/placeholder/index.html"
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/choppy-orc/index.html"
         );
 
         if (!response.ok) {
@@ -3889,7 +3937,7 @@ async function openPlaceholder() {
 
         // Make relative files load from the game folder
         const baseURL =
-            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/placeholder/";
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/choppy-orc/";
 
         if (!/<base\s/i.test(html)) {
             html = html.replace(
@@ -3913,19 +3961,19 @@ async function openPlaceholder() {
 }
 </script>
 
-<!-- Placeholder End -->
+<!-- Choppy Orc End -->
 
 
 
-<!-- Placeholder -->
-<div class="image-container" onclick="openPlaceholder()" style="cursor: pointer;">
-    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/placeholder.png">
-    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bad-fade.png">
-    <div class="image-text">PLACEHOLDER</div>
+<!-- Core Ball -->
+<div class="image-container" onclick="openCoreBall()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/core-ball.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Core Ball</div>
 </div>
 
 <script>
-async function openPlaceholder() {
+async function openCoreBall() {
     // Open the about:blank tab immediately
     const win = window.open("about:blank", "_blank");
 
@@ -3937,7 +3985,7 @@ async function openPlaceholder() {
     try {
         // Download the HTML source
         const response = await fetch(
-            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/placeholder/index.html"
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/core-ball/index.html"
         );
 
         if (!response.ok) {
@@ -3948,7 +3996,7 @@ async function openPlaceholder() {
 
         // Make relative files load from the game folder
         const baseURL =
-            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/placeholder/";
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/core-ball/";
 
         if (!/<base\s/i.test(html)) {
             html = html.replace(
@@ -3972,18 +4020,18 @@ async function openPlaceholder() {
 }
 </script>
 
-<!-- Placeholder End -->
+<!-- Core Ball End -->
 
 
-<!-- Placeholder -->
-<div class="image-container" onclick="openPlaceholder()" style="cursor: pointer;">
-    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/placeholder.png">
-    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bad-fade.png">
-    <div class="image-text">PLACEHOLDER</div>
+<!-- Table Tennis World Tour -->
+<div class="image-container" onclick="openTableTennisWorldTour()" style="cursor: pointer;">
+    <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/table-tennis-world-tour.png">
+    <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+    <div class="image-text">Table Tennis World Tour</div>
 </div>
 
 <script>
-async function openPlaceholder() {
+async function openTableTennisWorldTour() {
     // Open the about:blank tab immediately
     const win = window.open("about:blank", "_blank");
 
@@ -3995,7 +4043,7 @@ async function openPlaceholder() {
     try {
         // Download the HTML source
         const response = await fetch(
-            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/placeholder/index.html"
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/table-tennis-world-tour/index.html"
         );
 
         if (!response.ok) {
@@ -4006,7 +4054,7 @@ async function openPlaceholder() {
 
         // Make relative files load from the game folder
         const baseURL =
-            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/placeholder/";
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/table-tennis-world-tour/";
 
         if (!/<base\s/i.test(html)) {
             html = html.replace(
@@ -4030,7 +4078,7 @@ async function openPlaceholder() {
 }
 </script>
 
-<!-- Placeholder End -->
+<!-- Tabble Tennis World Tour End -->
 
 
 
