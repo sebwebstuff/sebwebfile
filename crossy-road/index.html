@@ -1,17 +1,39 @@
-﻿<!doctype HTML>
+<!--
+Game Bootstrapper
+
+New - Jon A Bellini 11/4/2024
+ 
+-->
+<!doctype HTML>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-<title>Crossy Road </title>
-<meta name="robots" content="noindex,nofollow" />
-<link rel="shortcut icon" href="https://play-lh.googleusercontent.com/2yH_JCxn7D9FttXZViPhmvIEDfRhio5qdLdWJLxcIfh8PjIkVeBgt_Gj7q21dIRp97g" type="image/x-icon">
-<link rel="stylesheet" href="style.css" />
-<link rel="stylesheet" async href="app-store-interstitial.css" />
-<script src="poki-sdk.js"></script>
-<script src="scripts/extra.min.js"></script>
+  <base href="https://cdn.jsdelivr.net/gh/bubbls/youtube-playables@latest/crossy-road/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Crossy Road</title>
+
+  <!-- Load the YouTube Playables SDK as the first script -->
+  <script src="https://cdn.jsdelivr.net/gh/bubbls/youtube-playables@main/ytgame.js" nonce="2KHli9LrFFijH2jCb5SkMw"></script>
+
+  <!-- Load game's CSS file. -->
+  <link rel="stylesheet" href="style.css" nonce="2KHli9LrFFijH2jCb5SkMw">
+
+   <!-- Core libraries like Three.js -->
+  <script src="scripts/three.min.js" nonce="2KHli9LrFFijH2jCb5SkMw"></script>
+
+  <!-- Main game script -->
+  <script src="scripts/game.min.js" nonce="2KHli9LrFFijH2jCb5SkMw"></script>
+
+  <!-- Additional scripts -->
+  <script src="scripts/extra.min.js" nonce="2KHli9LrFFijH2jCb5SkMw"></script>
+  <script src="scripts/bootstrap.min.js" nonce="2KHli9LrFFijH2jCb5SkMw"></script>
 </head>
+
 <body>
-<script src="scripts/bootstrap.min.js"></script>
+  <canvas id="canvas"></canvas>
+  <div id="build-number"></div>  <!-- delete this when not in testing -->
+
+  
 </body>
 </html>
