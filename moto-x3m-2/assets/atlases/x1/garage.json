@@ -1,4 +1,4 @@
-{"frames": {
+﻿{"frames": {
 
 "0bg_garage0000":
 {
@@ -184,7 +184,7 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
 	"sourceSize": {"w":40,"h":40}
 },
-"branding_l20000":
+"branding_l00000":
 {
 	"frame": {"x":2,"y":1171,"w":126,"h":71},
 	"rotated": false,
@@ -263,30 +263,6 @@
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":305,"h":404},
 	"sourceSize": {"w":305,"h":404}
-},
-"moto10000":
-{
-	"frame": {"x":2,"y":1083,"w":180,"h":86},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":86},
-	"sourceSize": {"w":180,"h":86}
-},
-"moto30000":
-{
-	"frame": {"x":184,"y":1015,"w":180,"h":90},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":90},
-	"sourceSize": {"w":180,"h":90}
-},
-"moto40000":
-{
-	"frame": {"x":2,"y":991,"w":180,"h":90},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":90},
-	"sourceSize": {"w":180,"h":90}
 },
 "next_btn0000":
 {
