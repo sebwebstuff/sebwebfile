@@ -255,7 +255,7 @@
           await promise;
         });
         var bundles = Object.keys(splitBundles).map((fileName) =>
-          bundleBlob("StreamingAssets/aa/WebGL/" + fileName, splitBundles[fileName])
+          bundleBlob("../StreamingAssets/aa/WebGL/" + fileName, splitBundles[fileName])
         );
         await Promise.all(regularFiles.concat(bundles));
       }
