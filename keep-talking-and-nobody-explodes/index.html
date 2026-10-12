@@ -154,7 +154,7 @@ async function assembleUnityData(chunkBase) {
     const chunks = await Promise.all(
         Array.from({ length: DATA_CHUNK_COUNT }, async function (_, index) {
             const name = "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/keep-talking-and-nobody-explodes/data/data-" + String(index).padStart(3, "0") + ".bin";
-            const response = await fetch(chunkBase + name);
+            const response = await fetch(name);
             if (!response.ok) {
                 throw new Error("Unity data chunk request failed with HTTP " + response.status + ": " + name);
             }
