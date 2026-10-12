@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Birb</title>
+    <!-- Visible before the game bundle, account preparation and fonts are ready. -->
+    <style id="bootstrap-loading-style">
+        #loading-screen[data-bootstrap] {
+            position: fixed; inset: 0; z-index: 9999; display: grid; place-items: center;
+            background: #1a1c2c; color: #f2e8cf; font: 24px monospace; text-align: center;
+        }
+        #loading-screen[data-bootstrap] .loading-text { margin-bottom: 16px; }
+        #loading-screen[data-bootstrap] .loading-bar {
+            width: 200px; height: 12px; border: 3px solid #566c86;
+            background: #10141f; overflow: hidden; margin: 0 auto;
+        }
+        #loading-screen[data-bootstrap] .loading-fill {
+            width: 100%; height: 100%; background: #94d2bd; transform-origin: left;
+            animation: bootstrap-loading 1.5s ease-in-out infinite;
+        }
+        @keyframes bootstrap-loading { 0%, 100% { transform: scaleX(0); } 50% { transform: scaleX(1); } }
+    </style>
+    <script src="./itch-frame-ready.js"></script>
+  <script type="module" crossorigin src="./assets/modulepreload-polyfill-Ba1Ytapf.js"></script>
+  <script type="module" crossorigin src="./assets/maps-DNqux_gr.js"></script>
+  <script type="module" crossorigin src="./assets/vendor-_76S_IF2.js"></script>
+  <script type="module" crossorigin src="./assets/audio-VSYubAnL.js"></script>
+  <script type="module" crossorigin src="./assets/editors-Bk1jOShp.js"></script>
+  <script type="module" crossorigin src="./assets/main-DBqk1gka.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-DHTs03uK.css">
+</head>
+
+<body>
+    <div id="loading-screen" data-bootstrap role="status" aria-live="polite" aria-busy="true">
+        <div class="loading-content">
+            <div class="loading-text">Loading...</div>
+            <div class="loading-bar" aria-hidden="true"><div class="loading-fill"></div></div>
+        </div>
+    </div>
+    <div id="game-container">
+        <div id="game-area">
+            <canvas id="game-canvas"></canvas>
+        </div>
+        <div id="ui-panel">
+            <div id="ui-panel-scale">
+                <div id="tab-content"></div>
+            </div>
+        </div>
+    </div>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"5ebf8334504a4422b678d47ffc658277","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+
+</html>
