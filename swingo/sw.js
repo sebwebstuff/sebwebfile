@@ -1,0 +1,1 @@
+No Content: https://jasongamesdev.github.io/swingo/sw.js
