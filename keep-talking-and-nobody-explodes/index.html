@@ -195,7 +195,7 @@
 
                 var config = await response.json();
                 config.dataUrl = await assembleUnityData();
-                config.wasmCodeUrl = "https://squidward5.github.io/ktane-webport/Build/ktanefix.WebGL.wasm";
+                config.wasmCodeUrl = "https://sebweblinks.web.app/ktane/ktanefix.WebGL.wasm";
                 config.wasmFrameworkUrl = CDN_BASE + "/Build/ktanefix.WebGL.wasm.framework.unityweb";
 
                 window.__unityConfigUrl = URL.createObjectURL(
