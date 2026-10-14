@@ -1,0 +1,319 @@
+<h1>These games have not been tested and most likely wont work</h1>
+
+<!-- Rounds -->
+<button onclick="openRounds()">Rounds</button>
+
+<script>
+async function openRounds() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/nawsif/html/rounds.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Space Waves HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the Space Waves folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/nawsif/html/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Seb Web</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+
+
+<!-- Spider Heck -->
+<button onclick="openSpiderHeck()">Spider Heck</button>
+
+<script>
+async function openSpiderHeck() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/Lexleethor/spiderheck/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Space Waves HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the Space Waves folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/Lexleethor/spiderheck/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Seb Web</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+
+
+<!-- Minecraft? -->
+<button onclick="openMinecraft()">Minecraft?</button>
+
+<script>
+async function openMinecraft() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/atharvchoudhari123/minecraft-web/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Space Waves HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the Space Waves folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/atharvchoudhari123/minecraft-web/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Seb Web</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+
+
+<!-- Slow Roads -->
+<button onclick="openSlowRoads()">Slow Roads (Steam Version)</button>
+
+<script>
+async function openSlowRoads() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/SnakierdoorCode/GAMES/Ports/SlowRoads/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Space Waves HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the Space Waves folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/SnakierdoorCode/GAMES/Ports/SlowRoads/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Seb Web</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+
+
+
+<!-- Among Us -->
+<button onclick="openAmong()">Among Us</button>
+
+<script>
+async function openAmong() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/ytsodacan/moongus/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Space Waves HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the Space Waves folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/ytsodacan/moongus/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Seb Web</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+
+
+
+<!-- Among Us -->
+<button onclick="openBlackHole()">Among Us</button>
+
+<script>
+async function openBlackHole() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://cdn.jsdelivr.net/gh/xiawp/A-Game-About-Feeding-A-Black-Hole/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Space Waves HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the Space Waves folder
+        const baseURL =
+            "https://cdn.jsdelivr.net/gh/xiawp/A-Game-About-Feeding-A-Black-Hole/";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Seb Web</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
