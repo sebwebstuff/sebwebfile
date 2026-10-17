@@ -137,7 +137,7 @@ async function openEaglercraft1122() {
     try {
         // Download the HTML source
         const response = await fetch(
-            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/GeometryDash/index.html"
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/GeometryDash.html"
         );
 
         if (!response.ok) {
@@ -148,7 +148,7 @@ async function openEaglercraft1122() {
 
         // Make relative files load from the game folder
         const baseURL =
-            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/GeometryDash/";
+            "https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/";
 
         if (!/<base\s/i.test(html)) {
             html = html.replace(
