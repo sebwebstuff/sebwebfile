@@ -1,0 +1,129 @@
+<html>
+
+<head>
+
+<!-- style.css -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/sebweblinks/style.css">
+
+<!-- Quicksand Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+<!-- website .ico -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+ 
+</head>
+
+<body>
+
+
+
+
+<div class="container">
+
+<h1>seb web links</h1>
+
+<div style="height: 5.25vw;"></div>
+
+
+
+
+<!-- you know what -->
+
+<center>
+<button class="good" onclick="openAbout()">about:</button>
+</center>
+
+<script>
+async function openAbout() {
+    // Open the about:blank tab immediately
+    const win = window.open("about:blank", "_blank");
+
+    if (!win) {
+        alert("Please allow popups for this website.");
+        return;
+    }
+
+    try {
+        // Download the HTML source
+        const response = await fetch(
+            "https://raw.githubusercontent.com/sebwebstuff/sebwebfile/main/stuff-test/index.html"
+        );
+
+        if (!response.ok) {
+            throw new Error("Could not download Space Waves HTML");
+        }
+
+        let html = await response.text();
+
+        // Make relative files load from the Space Waves folder
+        const baseURL =
+            "https://raw.githubusercontent.com/sebwebstuff/sebwebfile/main/stuff-test/index.html";
+
+        if (!/<base\s/i.test(html)) {
+            html = html.replace(
+                /<head([^>]*)>/i,
+                `<head$1><base href="${baseURL}">`
+            );
+        }
+
+        // Write the HTML into about:blank
+        win.document.open();
+        win.document.write(html);
+        win.document.close();
+
+    } catch (error) {
+        console.error(error);
+
+        win.document.body.innerHTML =
+            "<h1>Failed to load Sebweb</h1>" +
+            "<p>" + error.message + "</p>";
+    }
+}
+</script>
+
+<div style="height: 2.625vw;"></div>
+
+
+
+
+<!-- v1 -->
+<center>
+<a href="https://script.google.com/macros/s/AKfycbxIY4a3Z5euG5eGJoWc6XZxwWtv3qIi9pU1ZFoDiEHlbDJxJ_ThYRU2rQF2A0dIe8ukvw/exec">
+	<button class="good">v1</button>
+</a>
+</center>
+
+<div style="height: 2.625vw;"></div>
+
+
+
+<!-- v2 -->
+<center>
+<a href="https://script.google.com/macros/s/AKfycbz0QFFArR-hEQzoJGYfUf3yMm0RXCC98fpxuKUHvDMHwhSN14vN2maFVBv5t2L9dymYvA/exec">
+	<button class="good">v2</button>
+</a>
+</center>
+
+<div style="height: 2.625vw;"></div>
+
+
+
+<!-- v3 -->
+<center>
+<a href="https://script.google.com/macros/s/AKfycbxJU1peptldFPzeHUnbWdrOfywVxV8l2mMRiAEKR0wYTGSXn-eis8oJnLbaVh-0mSRLRQ/exec">
+	<button class="good">v3</button>
+</a>
+</center>
+
+<div style="height: 2.625vw;"></div>
+
+
+
+</div>
+
+
+</body>
+
+</html>
