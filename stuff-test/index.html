@@ -1,5 +1,5 @@
 <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/stuff-test/styles.css">
+    <link rel="stylesheet" href="styles.css">
 
     <!-- Quicksand Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -884,7 +884,7 @@
     <!-- run-3 -->
     <div class="image-container" data-game="run-3" >
         <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/run-3.png">
-        <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+        <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bad-fade.png">
         <div class="image-text">Run 3</div>
     </div>
 
@@ -989,412 +989,544 @@ let gameOpen = false;
 <!-- game list -->
 const gameList = {
     "among-us": {
+        tags: ["about"],
         folder: "https://cdn.jsdelivr.net/gh/wasmdotrip/wasm.rip/files/amongus/latest/"
     },
     "eaglercraft-1.12.2": {
-        folder: GAME_CDN + "eaglercraft-1.12.2/",
-        tags: ["about"]
+        tags: ["about"],
+        folder: GAME_CDN + "eaglercraft-1.12.2/"
     },
     "slow-roads": {
+        tags: ["about"],
         folder: GAME_CDN + "slow-roads/"
     },
     "tag": {
+        tags: ["about"],
         folder: GAME_CDN + "tag/"
     },
     "tag-2": {
+        tags: ["about"],
         folder: GAME_CDN + "tag-2/"
     },
     "space-waves": {
+        tags: ["about"],
         folder: GAME_CDN + "space-waves/"
     },
     "brotato": {
+        tags: ["about"],
         folder: GAME_CDN + "brotato/"
     },
     "time-shooter-2": {
+        tags: ["about"],
         folder: GAME_CDN + "time-shooter-2/"
     },
     "time-shooter-3": {
+        tags: ["about"],
         folder: GAME_CDN + "time-shooter-3/"
     },
     "hollow-knight": {
+        tags: ["about"],
         folder: GAME_CDN + "hollow-knight/"
     },
     "house-of-hazards": {
+        tags: ["about"],
         folder: GAME_CDN + "house-of-hazards/"
     },
     "sort-the-court": {
+        tags: ["about"],
         folder: GAME_CDN + "sort-the-court/"
     },
     "drive-mad": {
+        tags: ["about"],
         folder: GAME_CDN + "drive-mad/"
     },
     "gobble": {
+        tags: ["about"],
         folder: GAME_CDN + "gobble/"
     },
     "recoil": {
+        tags: ["about"],
         folder: GAME_CDN + "recoil/"
     },
     "roper": {
+        tags: ["about"],
         folder: GAME_CDN + "roper/"
     },
     "level-devil": {
+        tags: ["about"],
         folder: GAME_CDN + "level-devil/"
     },
     "ragdoll-archers": {
+        tags: ["about"],
         folder: GAME_CDN + "ragdoll-archers/"
     },
     "big-tower-tiny-square": {
+        tags: ["about"],
         folder: GAME_CDN + "big-tower-tiny-square/"
     },
     "big-tower-tiny-square-2": {
+        tags: ["about"],
         folder: GAME_CDN + "big-tower-tiny-square-2/"
     },
     "big-ice-tower-tiny-square": {
+        tags: ["about"],
         folder: GAME_CDN + "big-ice-tower-tiny-square/"
     },
     "big-neon-tower-tiny-square": {
+        tags: ["about"],
         folder: GAME_CDN + "big-neon-tower-tiny-square/"
     },
     "big-flappy-tower-tiny-square": {
+        tags: ["about"],
         folder: GAME_CDN + "big-flappy-tower-tiny-square/"
     },
     "gladihoppers": {
+        tags: ["about"],
         folder: GAME_CDN + "gladihoppers/"
     },
     "ovo": {
-        folder: GAME_CDN + "ovo/",
-        tags: ["about"]
+        tags: ["about"],
+        folder: GAME_CDN + "ovo/"
     },
     "ovo-2": {
+        tags: ["about"],
         folder: GAME_CDN + "ovo-2/"
     },
     "hover-racer-drive": {
+        tags: ["about"],
         folder: GAME_CDN + "hover-racer-drive/"
     },
     "slime-rancher": {
+        tags: ["about"],
         folder: GAME_CDN + "slime-rancher/"
     },
     "baldis-basics": {
+        tags: ["about"],
         folder: GAME_CDN + "baldis-basics/"
     },
     "baldis-basics-plus": {
+        tags: ["about"],
         folder: GAME_CDN + "baldis-basics-plus/"
     },
     "ducklings-io": {
+        tags: ["about"],
         folder: GAME_CDN + "ducklings-io/"
     },
     "superhot": {
+        tags: ["about"],
         folder: GAME_CDN + "superhot/"
     },
     "gunspin": {
+        tags: ["about"],
         folder: GAME_CDN + "gunspin/"
     },
     "buckshot-roulette": {
+        tags: ["about"],
         folder: GAME_CDN + "buckshot-roulette/"
     },
     "cuphead": {
+        tags: ["about"],
         folder: GAME_CDN + "cuphead/"
     },
     "crossy-road": {
+        tags: ["about"],
         folder: GAME_CDN + "crossy-road/"
     },
     "polytrack": {
+        tags: ["about"],
         folder: GAME_CDN + "polytrack/"
     },
     "monkey-mart": {
+        tags: ["about"],
         folder: GAME_CDN + "monkey-mart/"
     },
     "terraria": {
+        tags: ["about"],
         folder: GAME_CDN + "terraria/"
     },
     "stickman-hook": {
+        tags: ["about"],
         folder: GAME_CDN + "stickman-hook/"
     },
     "stickman-hook-halloween": {
+        tags: ["about"],
         folder: GAME_CDN + "stickman-hook-halloween/"
     },
     "tomb-of-the-mask": {
+        tags: ["about"],
         folder: GAME_CDN + "tomb-of-the-mask/"
     },
     "basket-random": {
+        tags: ["about"],
         folder: GAME_CDN + "basket-random/"
     },
     "soccer-random": {
+        tags: ["about"],
         folder: GAME_CDN + "soccer-random/"
     },
     "volley-random": {
+        tags: ["about"],
         folder: GAME_CDN + "volley-random/"
     },
     "boxing-random": {
+        tags: ["about"],
         folder: GAME_CDN + "boxing-random/"
     },
     "rooftop-snipers": {
+        tags: ["about"],
         folder: GAME_CDN + "rooftop-snipers/"
     },
     "janissary-battles": {
+        tags: ["about"],
         folder: GAME_CDN + "janissary-battles/"
     },
     "super-mario-64": {
+        tags: ["about"],
         folder: GAME_CDN + "super-mario-64/"
     },
     "cloverpit": {
+        tags: ["about"],
         folder: GAME_CDN + "cloverpit/"
     },
     "balatro": {
+        tags: ["about"],
         folder: GAME_CDN + "balatro/"
     },
     "adventure-capitalist": {
+        tags: ["about"],
         folder: GAME_CDN + "adventure-capitalist/"
     },
     "retro-bowl": {
+        tags: ["about"],
         folder: GAME_CDN + "retro-bowl/"
     },
     "smash-karts": {
+        tags: ["about"],
         folder: GAME_CDN + "smash-karts/"
     },
     "snow-rider-3d": {
-        folder: GAME_CDN + "snow-rider-3d/",
-        tags: ["about"]
+        tags: ["about"],
+        folder: GAME_CDN + "snow-rider-3d/"
     },
     "pikwip": {
+        tags: ["about"],
         folder: GAME_CDN + "pikwip/"
     },
     "gun-knight": {
+        tags: ["about"],
         folder: GAME_CDN + "gun-knight/"
     },
     "kour-io": {
+        tags: ["about"],
         folder: GAME_CDN + "kour.io/"
     },
     "swingo": {
+        tags: ["about"],
         folder: GAME_CDN + "swingo/"
     },
     "bumgi-slime": {
+        tags: ["about"],
         folder: GAME_CDN + "blumgi-slime/"
     },
     "escape-road": {
+        tags: ["about"],
         folder: GAME_CDN + "escape-road/"
     },
     "escape-road-2": {
+        tags: ["about"],
         folder: GAME_CDN + "escape-road-2/"
     },
     "dire-decks": {
+        tags: ["about"],
         folder: GAME_CDN + "dire-decks/"
     },
     "help-no-brake": {
+        tags: ["about"],
         folder: GAME_CDN + "help-no-brake/"
     },
     "peak": {
+        tags: ["about"],
         folder: GAME_CDN + "peak/"
     },
     "scritchy-scratchy": {
+        tags: ["about"],
         folder: GAME_CDN + "scritchy-scratchy/"
     },
     "clustertruck": {
+        tags: ["about"],
         folder: GAME_CDN + "clustertruck/"
     },
     "birb": {
+        tags: ["about"],
         folder: GAME_CDN + "birb/"
     },
     "paper-io": {
+        tags: ["about"],
         folder: GAME_CDN + "paper-io/"
     },
     "duck-life-6": {
+        tags: ["about"],
         folder: GAME_CDN + "duck-life-6/"
     },
     "duck-life-7": {
+        tags: ["about"],
         folder: GAME_CDN + "duck-life-7/"
     },
     "duck-life-8": {
+        tags: ["about"],
         folder: GAME_CDN + "duck-life-8/"
     },
     "cookie-clicker": {
+        tags: ["about"],
         folder: GAME_CDN + "cookie-clicker/"
     },
     "trombone-champ": {
+        tags: ["about"],
         folder: GAME_CDN + "trombone-champ/"
     },
     "animals-volleyball": {
+        tags: ["about"],
         folder: GAME_CDN + "animals-volleyball/"
     },
     "choppy-orc": {
+        tags: ["about"],
         folder: GAME_CDN + "choppy-orc/"
     },
     "core-ball": {
+        tags: ["about"],
         folder: GAME_CDN + "core-ball/"
     },
     "table-tennis-world-tour": {
+        tags: ["about"],
         folder: GAME_CDN + "table-tennis-world-tour/"
     },
     "how-to-fish": {
+        tags: ["about"],
         folder: GAME_CDN + "how-to-fish/"
     },
     "nubbys-number-factory": {
+        tags: ["about"],
         folder: GAME_CDN + "nubbys-number-factory/"
     },
     "fish": {
+        tags: ["about"],
         folder: GAME_CDN + "fish/"
     },
     "tiny-fishing": {
-        folder: GAME_CDN + "tiny-fishing/",
-        tags: ["about"]
+        tags: ["about"],
+        folder: GAME_CDN + "tiny-fishing/"
     },
     "idle-breakout": {
+        tags: ["about"],
         folder: GAME_CDN + "idle-breakout/"
     },
     "drift-boss": {
+        tags: ["about"],
         folder: GAME_CDN + "drift-boss/"
     },
     "geometry-dash": {
+        tags: ["about"],
         folder: GAME_CDN + "geometry-dash/"
     },
     "keep-talking-and-nobody-explodes": {
+        tags: ["about"],
         folder: GAME_CDN + "keep-talking-and-nobody-explodes/"
     },
     "just-shapes-and-beats": {
+        tags: ["about"],
         folder: GAME_CDN + "just-shapes-and-beats/"
     },
     "tabs": {
+        tags: ["about"],
         folder: GAME_CDN + "tabs/"
     },
     "meowdoku": {
+        tags: ["about"],
         folder: GAME_CDN + "meowdoku/"
     },
     "golf-orbit": {
+        tags: ["about"],
         folder: GAME_CDN + "golf-orbit/"
     },
     "rulehouse": {
+        tags: ["about"],
         folder: GAME_CDN + "rulehouse/"
     },
     "spaceflight-simulator": {
+        tags: ["about"],
         folder: GAME_CDN + "spaceflight-simulator/"
     },
     "moto-x3m": {
+        tags: ["about"],
         folder: GAME_CDN + "moto-x3m/"
     },
     "moto-x3m-2": {
+        tags: ["about"],
         folder: GAME_CDN + "moto-x3m-2/"
     },
     "moto-x3m-3": {
+        tags: ["about"],
         folder: GAME_CDN + "moto-x3m-3/"
     },
     "moto-x3m-pool-party": {
+        tags: ["about"],
         folder: GAME_CDN + "moto-x3m-pool-party/"
     },
     "moto-x3m-spooky": {
+        tags: ["about"],
         folder: GAME_CDN + "moto-x3m-spooky/"
     },
     "moto-x3m-winter": {
+        tags: ["about"],
         folder: GAME_CDN + "moto-x3m-winter/"
     },
     "idle-ants": {
+        tags: ["about"],
         folder: GAME_CDN + "idle-ants/"
     },
     "animal-arena": {
+        tags: ["about"],
         folder: GAME_CDN + "animal-arena/"
     },
     "basketball-stars": {
+        tags: ["about"],
         folder: GAME_CDN + "basketball-stars/"
     },
     "basketbros-io": {
+        tags: ["about"],
         folder: GAME_CDN + "basketbros-io/"
     },
     "bitlife": {
+        tags: ["about"],
         folder: GAME_CDN + "bitlife/"
     },
     "blumgi-racers": {
+        tags: ["about"],
         folder: GAME_CDN + "blumgi-racers/"
     },
     "blumgi-rocket": {
+        tags: ["about"],
         folder: GAME_CDN + "blumgi-rocket/"
     },
     "blumgi-slime": {
+        tags: ["about"],
         folder: GAME_CDN + "blumgi-slime/"
     },
     "bobble": {
+        tags: ["about"],
         folder: GAME_CDN + "bobble/"
     },
     "bounce-back": {
+        tags: ["about"],
         folder: GAME_CDN + "bounce-back/"
     },
     "cell-machine": {
+        tags: ["about"],
         folder: GAME_CDN + "cell-machine/"
     },
     "chessformer": {
+        tags: ["about"],
         folder: GAME_CDN + "chessformer/"
     },
     "dadish": {
+        tags: ["about"],
         folder: GAME_CDN + "dadish/"
     },
     "dadish-2": {
+        tags: ["about"],
         folder: GAME_CDN + "dadish-2/"
     },
     "dadish-3": {
+        tags: ["about"],
         folder: GAME_CDN + "dadish-3/"
     },
     "dadish-3d": {
+        tags: ["about"],
         folder: GAME_CDN + "dadish-3d/"
     },
     "drift-hunters": {
+        tags: ["about"],
         folder: GAME_CDN + "drift-hunters/"
     },
     "dune": {
+        tags: ["about"],
         folder: GAME_CDN + "dune/"
     },
     "economical": {
+        tags: ["about"],
         folder: GAME_CDN + "economical/"
     },
     "economical-2": {
+        tags: ["about"],
         folder: GAME_CDN + "economical-2/"
     },
     "line-rider": {
+        tags: ["about"],
         folder: GAME_CDN + "line-rider/"
     },
     "retro-bowl-college": {
+        tags: ["about"],
         folder: GAME_CDN + "retro-bowl-college/"
     },
     "run-2": {
+        tags: ["about"],
         folder: GAME_CDN + "run-2/"
     },
     "run-3": {
+        tags: ["about"],
         folder: GAME_CDN + "run-3/"
     },
     "shadow-trick": {
+        tags: ["about"],
         folder: GAME_CDN + "shadow-trick/"
     },
     "stack": {
+        tags: ["about"],
         folder: GAME_CDN + "stack/"
     },
     "tanuki-sunset": {
+        tags: ["about"],
         folder: GAME_CDN + "tanuki-sunset/"
     },
     "tunnel-rush": {
+        tags: ["about"],
         folder: GAME_CDN + "tunnel-rush/"
     },
     "vex-4": {
+        tags: ["about"],
         folder: GAME_CDN + "vex-4/"
     },
     "vex-5": {
+        tags: ["about"],
         folder: GAME_CDN + "vex-5/"
     },
     "vex-6": {
+        tags: ["about"],
         folder: GAME_CDN + "vex-6/"
     },
     "vex-7": {
+        tags: ["about"],
         folder: GAME_CDN + "vex-7/"
     },
     "vex-8": {
+        tags: ["about"],
         folder: GAME_CDN + "vex-8/"
     },
     "vex-x3m": {
+        tags: ["about"],
         folder: GAME_CDN + "vex-x3m/"
     },
     "yohoho-io": {
+        tags: ["about"],
         folder: GAME_CDN + "yohoho-io/"
     },
     "zombie-rush": {
+        tags: ["about"],
         folder: GAME_CDN + "zombie-rush/"
     },
 };
+
+
 
 
 
