@@ -1,0 +1,31 @@
+[debug] [2026-10-26T22:29:21.672Z] ----------------------------------------------------------------------
+[debug] [2026-10-26T22:29:21.676Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\seaba\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2026-10-26T22:29:21.676Z] CLI Version:   15.9.0
+[debug] [2026-10-26T22:29:21.676Z] Platform:      win32
+[debug] [2026-10-26T22:29:21.676Z] Node Version:  v22.14.0
+[debug] [2026-10-26T22:29:21.677Z] Time:          Mon Oct 26 2026 18:29:21 GMT-0400 (Eastern Daylight Time)
+[debug] [2026-10-26T22:29:21.677Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-10-26T22:29:24.506Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-10-26T22:29:24.507Z] > authorizing via signed-in user (cebsafe0@gmail.com)
+[debug] [2026-10-26T22:29:24.507Z] [iam] checking project sebwebgames3 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-10-26T22:29:24.509Z] Checked if tokens are valid: true, expires at: 1793056668862
+[debug] [2026-10-26T22:29:24.509Z] Checked if tokens are valid: true, expires at: 1793056668862
+[debug] [2026-10-26T22:29:24.510Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/sebwebgames3:testIamPermissions [none]
+[debug] [2026-10-26T22:29:24.510Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/sebwebgames3:testIamPermissions  x-goog-user-project=sebwebgames3
+[debug] [2026-10-26T22:29:24.510Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sebwebgames3:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-10-26T22:29:24.858Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/sebwebgames3:testIamPermissions 403
+[debug] [2026-10-26T22:29:24.858Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sebwebgames3:testIamPermissions {"error":{"code":403,"message":"Caller does not have required permission to use project sebwebgames3. Grant the caller the roles/serviceusage.serviceUsageConsumer role, or a custom role with the serviceusage.services.use permission, by visiting https://console.developers.google.com/iam-admin/iam?project=sebwebgames3 and then retry. Propagation of the new permission may take a few minutes.","status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"USER_PROJECT_DENIED","domain":"googleapis.com","metadata":{"consumer":"projects/sebwebgames3","consoleUrl":"https://console.developers.google.com/iam-admin/iam?project=sebwebgames3","service":"cloudresourcemanager.googleapis.com","containerInfo":"sebwebgames3"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Caller does not have required permission to use project sebwebgames3. Grant the caller the roles/serviceusage.serviceUsageConsumer role, or a custom role with the serviceusage.services.use permission, by visiting https://console.developers.google.com/iam-admin/iam?project=sebwebgames3 and then retry. Propagation of the new permission may take a few minutes."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developer console IAM admin","url":"https://console.developers.google.com/iam-admin/iam?project=sebwebgames3"}]}]}}
+[debug] [2026-10-26T22:29:24.859Z] [iam] error while checking permissions, command may fail: Request to https://cloudresourcemanager.googleapis.com/v1/projects/sebwebgames3:testIamPermissions had HTTP Error: 403, Caller does not have required permission to use project sebwebgames3. Grant the caller the roles/serviceusage.serviceUsageConsumer role, or a custom role with the serviceusage.services.use permission, by visiting https://console.developers.google.com/iam-admin/iam?project=sebwebgames3 and then retry. Propagation of the new permission may take a few minutes.
+[debug] [2026-10-26T22:29:24.860Z] Checked if tokens are valid: true, expires at: 1793056668862
+[debug] [2026-10-26T22:29:24.860Z] Checked if tokens are valid: true, expires at: 1793056668862
+[debug] [2026-10-26T22:29:24.861Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sebwebgames3 [none]
+[debug] [2026-10-26T22:29:25.261Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sebwebgames3 403
+[debug] [2026-10-26T22:29:25.261Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sebwebgames3 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2026-10-26T22:29:25.261Z] Request to https://firebase.googleapis.com/v1beta1/projects/sebwebgames3 had HTTP Error: 403, The caller does not have permission
+[debug] [2026-10-26T22:29:25.265Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/sebwebgames3 had HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\seaba\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:53:12)
+    at RetryOperation._fn (C:\Users\seaba\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:333:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[error] 
+[error] Error: Failed to get Firebase project sebwebgames3. Please make sure the project exists and your account has permission to access it.
