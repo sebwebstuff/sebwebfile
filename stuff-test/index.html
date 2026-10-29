@@ -19,13 +19,33 @@
     <input
         type="text"
         id="game-search"
-        placeholder="Search..."
+        placeholder="Categories Unfinished"
         autocomplete="off"
     >
+    <select id="game-sort" aria-label="Sort games">
+        <option value="default">Date Added</option>
+        <option value="asc">Alphabetical: A–Z</option>
+        <option value="desc">Alphabetical: Z–A</option>
+    </select>
 </div>
 
-
-
+<div class="category-bar" role="group" aria-label="Filter games by category">
+    <button class="category-button active" type="button" data-category="all" aria-pressed="true">All Games <span class="category-count">0</span></button>
+    <button class="category-button" type="button" data-category="original" aria-pressed="false">Seb Web Original <span class="category-count">0</span></button>
+    <button class="category-button" type="button" data-category="action" aria-pressed="false">Action <span class="category-count">0</span></button>
+    <button class="category-button" type="button" data-category="adventure" aria-pressed="false">Adventure <span class="category-count">0</span></button>
+    <button class="category-button" type="button" data-category="chill" aria-pressed="false">Chill <span class="category-count">0</span></button>
+        <button class="category-button" type="button" data-category="driving" aria-pressed="false">Driving <span class="category-count">0</span></button>
+    <button class="category-button" type="button" data-category="idle" aria-pressed="false">Idle <span class="category-count">0</span></button>
+    <button class="category-button" type="button" data-category="multiplayer" aria-pressed="false">Multiplayer <span class="category-count">0</span></button>
+    <button class="category-button" type="button" data-category="platformer" aria-pressed="false">Platformer <span class="category-count">0</span></button>
+    <button class="category-button" type="button" data-category="port" aria-pressed="false">Port <span class="category-count">0</span></button>
+    <button class="category-button" type="button" data-category="puzzle" aria-pressed="false">Puzzle <span class="category-count">0</span></button>
+    <button class="category-button" type="button" data-category="shooter" aria-pressed="false">Shooter <span class="category-count">0</span></button>
+    <button class="category-button" type="button" data-category="skill" aria-pressed="false">Skill <span class="category-count">0</span></button>
+    <button class="category-button" type="button" data-category="sport" aria-pressed="false">Sport <span class="category-count">0</span></button>
+    <button class="category-button" type="button" data-category="strategy" aria-pressed="false">Strategy <span class="category-count">0</span></button>
+</div>
 
 <div class="images-container">
 
@@ -751,11 +771,11 @@
         <div class="image-text">Basketball Stars</div>
     </div>
 
-    <!-- basketbros-io -->
-    <div class="image-container" data-game="basketbros-io" >
-        <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/basketbros-io.png">
+    <!-- basket-bros -->
+    <div class="image-container" data-game="basket-bros" >
+        <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/basket-bros.png">
         <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
-        <div class="image-text">Basketbros.io</div>
+        <div class="image-text">Basket Bros</div>
     </div>
 
 
@@ -923,7 +943,6 @@
         <div class="image-text">Tunnel Rush</div>
     </div>
 
-
     <!-- vex-4 -->
     <div class="image-container" data-game="vex-4" >
         <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/vex-4.png">
@@ -959,14 +978,12 @@
         <div class="image-text">Vex 8</div>
     </div>
 
-
     <!-- vex-x3m -->
     <div class="image-container" data-game="vex-x3m" >
         <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/vex-x3m.png">
         <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
         <div class="image-text">Vex X3M</div>
     </div>
-
 
     <!-- yohoho-io -->
     <div class="image-container" data-game="yohoho-io" >
@@ -980,6 +997,69 @@
         <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/zombie-rush.png">
         <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bad-fade.png">
         <div class="image-text">Zombie Rush</div>
+    </div>
+
+    <!-- soccer-bros -->
+    <div class="image-container" data-game="soccer-bros" >
+        <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/soccer-bros.png">
+        <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+        <div class="image-text">Soccer Bros</div>
+    </div>
+
+    <!-- football-bros -->
+    <div class="image-container" data-game="football-bros" >
+        <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/football-bros.png">
+        <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+        <div class="image-text">Football Bros</div>
+    </div>
+
+    <!-- baseball-bros -->
+    <div class="image-container" data-game="baseball-bros" >
+        <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/baseball-bros.png">
+        <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+        <div class="image-text">Baseball Bros</div>
+    </div>
+
+    <!-- karate-bros -->
+    <div class="image-container" data-game="karate-bros" >
+        <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/karate-bros.png">
+        <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+        <div class="image-text">Karate Bros</div>
+    </div>
+
+    <!-- wrestle-bros -->
+    <div class="image-container" data-game="wrestle-bros" >
+        <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/wrestle-bros.png">
+        <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bad-fade.png">
+        <div class="image-text">Wrestle Bros</div>
+    </div>
+
+    <!-- kart-bros -->
+    <div class="image-container" data-game="kart-bros" >
+        <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/kart-bros.png">
+        <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+        <div class="image-text">Kart Bros</div>
+    </div>
+
+    <!-- we-become-what-we-behold -->
+    <div class="image-container" data-game="we-become-what-we-behold" >
+        <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/we-become-what-we-behold.png">
+        <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+        <div class="image-text">We Become What We Behold</div>
+    </div>
+
+    <!-- stick-rope-heroes -->
+    <div class="image-container" data-game="stick-rope-heroes" >
+        <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/stick-rope-heroes.png">
+        <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+        <div class="image-text">Stick Ropes Heroes</div>
+    </div>
+
+    <!-- ragdoll-hit -->
+    <div class="image-container" data-game="ragdoll-hit" >
+        <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/ragdoll-hit.png">
+        <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+        <div class="image-text">Ragdoll Hit</div>
     </div>
 
 
@@ -996,427 +1076,427 @@ let gameOpen = false;
 <!-- game list -->
 const gameList = {
     "among-us": {
-        tags: ["about"],
+        tags: ["about", "multiplayer", "port", "strategy"],
         folder: "https://cdn.jsdelivr.net/gh/wasmdotrip/wasm.rip/files/amongus/latest/"
     },
     "eaglercraft-1.12.2": {
-        tags: ["about"],
+        tags: ["about", "adventure", "port"],
         folder: GAME_CDN + "eaglercraft-1.12.2/"
     },
     "slow-roads": {
-        tags: ["about"],
+        tags: ["about", "chill", "driving"],
         folder: GAME_CDN + "slow-roads/"
     },
     "tag": {
-        tags: ["about"],
+        tags: ["about", "action", "multiplayer", "skill"],
         folder: GAME_CDN + "tag/"
     },
     "tag-2": {
-        tags: ["about"],
+        tags: ["about", "action", "multiplayer", "skill"],
         folder: GAME_CDN + "tag-2/"
     },
     "space-waves": {
-        tags: ["about"],
+        tags: ["about", "action", "skill"],
         folder: GAME_CDN + "space-waves/"
     },
     "brotato": {
-        tags: ["about"],
+        tags: ["about", "action", "port", "strategy"],
         folder: GAME_CDN + "brotato/"
     },
     "time-shooter-2": {
-        tags: ["about"],
+        tags: ["about", "shooter"],
         folder: GAME_CDN + "time-shooter-2/"
     },
     "time-shooter-3": {
-        tags: ["about"],
+        tags: ["about", "shooter"],
         folder: GAME_CDN + "time-shooter-3/"
     },
     "hollow-knight": {
-        tags: ["about"],
+        tags: ["about", "action", "adventure", "platformer", "port", "skill"],
         folder: GAME_CDN + "hollow-knight/"
     },
     "house-of-hazards": {
-        tags: ["about"],
+        tags: ["about", "action", "multiplayer", "skill"],
         folder: GAME_CDN + "house-of-hazards/"
     },
     "sort-the-court": {
-        tags: ["about"],
+        tags: ["about", "chill", "strategy"],
         folder: GAME_CDN + "sort-the-court/"
     },
     "drive-mad": {
-        tags: ["about"],
+        tags: ["about", "driving", "skill"],
         folder: GAME_CDN + "drive-mad/"
     },
     "gobble": {
-        tags: ["about"],
+        tags: ["about", "puzzle", "strategy"],
         folder: GAME_CDN + "gobble/"
     },
     "recoil": {
-        tags: ["about"],
+        tags: ["about", "action", "shooter", "skill"],
         folder: GAME_CDN + "recoil/"
     },
     "roper": {
-        tags: ["about"],
+        tags: ["about", "platformer"],
         folder: GAME_CDN + "roper/"
     },
     "level-devil": {
-        tags: ["about"],
+        tags: ["about", "action", "platformer", "skill"],
         folder: GAME_CDN + "level-devil/"
     },
     "ragdoll-archers": {
-        tags: ["about"],
+        tags: ["about", "action", "multiplayer", "shooter", "skill"],
         folder: GAME_CDN + "ragdoll-archers/"
     },
     "big-tower-tiny-square": {
-        tags: ["about"],
+        tags: ["about", "platformer", "skill"],
         folder: GAME_CDN + "big-tower-tiny-square/"
     },
     "big-tower-tiny-square-2": {
-        tags: ["about"],
+        tags: ["about", "platformer", "skill"],
         folder: GAME_CDN + "big-tower-tiny-square-2/"
     },
     "big-ice-tower-tiny-square": {
-        tags: ["about"],
+        tags: ["about", "platformer", "skill"],
         folder: GAME_CDN + "big-ice-tower-tiny-square/"
     },
     "big-neon-tower-tiny-square": {
-        tags: ["about"],
+        tags: ["about", "platformer", "skill"],
         folder: GAME_CDN + "big-neon-tower-tiny-square/"
     },
     "big-flappy-tower-tiny-square": {
-        tags: ["about"],
+        tags: ["about", "platformer", "skill"],
         folder: GAME_CDN + "big-flappy-tower-tiny-square/"
     },
     "gladihoppers": {
-        tags: ["about"],
+        tags: ["about", "action", "skill"],
         folder: GAME_CDN + "gladihoppers/"
     },
     "ovo": {
-        tags: ["about"],
+        tags: ["about", "platformer", "skill"],
         folder: GAME_CDN + "ovo/"
     },
     "ovo-2": {
-        tags: ["about"],
+        tags: ["about", "platformer", "skill"],
         folder: GAME_CDN + "ovo-2/"
     },
     "hover-racer-drive": {
-        tags: ["about"],
+        tags: ["about", "driving", "skill"],
         folder: GAME_CDN + "hover-racer-drive/"
     },
     "slime-rancher": {
-        tags: ["about"],
+        tags: ["about", "adventure", "chill", "port"],
         folder: GAME_CDN + "slime-rancher/"
     },
     "baldis-basics": {
-        tags: ["about"],
+        tags: ["about", "port", "skill"],
         folder: GAME_CDN + "baldis-basics/"
     },
     "baldis-basics-plus": {
-        tags: ["about"],
+        tags: ["about", "port", "skill"],
         folder: GAME_CDN + "baldis-basics-plus/"
     },
     "ducklings-io": {
-        tags: ["about"],
+        tags: ["about", "adventure", "chill"],
         folder: GAME_CDN + "ducklings-io/"
     },
     "superhot": {
-        tags: ["about"],
+        tags: ["about", "action", "port", "shooter", "skill"],
         folder: GAME_CDN + "superhot/"
     },
     "gunspin": {
-        tags: ["about"],
+        tags: ["about", "chill", "shooter", "skill"],
         folder: GAME_CDN + "gunspin/"
     },
     "buckshot-roulette": {
-        tags: ["about"],
+        tags: ["about", "action", "port", "shooter", "strategy"],
         folder: GAME_CDN + "buckshot-roulette/"
     },
     "cuphead": {
-        tags: ["about"],
+        tags: ["about", "adventure", "port", "shooter"],
         folder: GAME_CDN + "cuphead/"
     },
     "crossy-road": {
-        tags: ["about"],
+        tags: ["about", "platformer", "skill"],
         folder: GAME_CDN + "crossy-road/"
     },
     "polytrack": {
-        tags: ["about"],
+        tags: ["about", "driving", "skill"],
         folder: GAME_CDN + "polytrack/"
     },
     "monkey-mart": {
-        tags: ["about"],
+        tags: ["about", "chill", "idle", "strategy"],
         folder: GAME_CDN + "monkey-mart/"
     },
     "terraria": {
-        tags: ["about"],
+        tags: ["about", "action", "adventure", "port", "strategy"],
         folder: GAME_CDN + "terraria/"
     },
     "stickman-hook": {
-        tags: ["about"],
+        tags: ["about", "chill"],
         folder: GAME_CDN + "stickman-hook/"
     },
     "stickman-hook-halloween": {
-        tags: ["about"],
+        tags: ["about", "chill"],
         folder: GAME_CDN + "stickman-hook-halloween/"
     },
     "tomb-of-the-mask": {
-        tags: ["about"],
+        tags: ["about", "action", "platformer", "skill"],
         folder: GAME_CDN + "tomb-of-the-mask/"
     },
     "basket-random": {
-        tags: ["about"],
+        tags: ["about", "multiplayer", "sport"],
         folder: GAME_CDN + "basket-random/"
     },
     "soccer-random": {
-        tags: ["about"],
+        tags: ["about", "multiplayer", "sport"],
         folder: GAME_CDN + "soccer-random/"
     },
     "volley-random": {
-        tags: ["about"],
+        tags: ["about", "multiplayer", "sport"],
         folder: GAME_CDN + "volley-random/"
     },
     "boxing-random": {
-        tags: ["about"],
+        tags: ["about", "multiplayer", "sport"],
         folder: GAME_CDN + "boxing-random/"
     },
     "rooftop-snipers": {
-        tags: ["about"],
+        tags: ["about", "multiplayer", "shooter"],
         folder: GAME_CDN + "rooftop-snipers/"
     },
     "janissary-battles": {
-        tags: ["about"],
+        tags: ["about", "action", "multiplayer", "shooter", "skill"],
         folder: GAME_CDN + "janissary-battles/"
     },
     "super-mario-64": {
-        tags: ["about"],
+        tags: ["about", "adventure", "platformer", "port", "skill"],
         folder: GAME_CDN + "super-mario-64/"
     },
     "cloverpit": {
-        tags: ["about"],
+        tags: ["about", "port", "strategy"],
         folder: GAME_CDN + "cloverpit/"
     },
     "balatro": {
-        tags: ["about"],
+        tags: ["about", "port", "strategy"],
         folder: GAME_CDN + "balatro/"
     },
     "adventure-capitalist": {
-        tags: ["about"],
+        tags: ["about", "idle", "strategy"],
         folder: GAME_CDN + "adventure-capitalist/"
     },
     "retro-bowl": {
-        tags: ["about"],
+        tags: ["about", "sport", "skill"],
         folder: GAME_CDN + "retro-bowl/"
     },
     "smash-karts": {
-        tags: ["about"],
+        tags: ["about", "action", "driving", "multiplayer", "skill"],
         folder: GAME_CDN + "smash-karts/"
     },
     "snow-rider-3d": {
-        tags: ["about"],
+        tags: ["about", "chill", "driving"],
         folder: GAME_CDN + "snow-rider-3d/"
     },
     "pikwip": {
-        tags: ["about"],
+        tags: ["about", "action", "multiplayer", "platformer", "skill"],
         folder: GAME_CDN + "pikwip/"
     },
     "gun-knight": {
-        tags: ["about"],
+        tags: ["about", "action", "platformer", "shooter", "skill"],
         folder: GAME_CDN + "gun-knight/"
     },
     "kour-io": {
-        tags: ["about"],
-        folder: GAME_CDN + "kour.io/"
+        tags: ["about", "multiplayer", "shooter"],
+        folder: GAME_CDN + "kour-io/"
     },
     "swingo": {
-        tags: ["about"],
+        tags: ["about", "chill", "platformer", "skill"],
         folder: GAME_CDN + "swingo/"
     },
-    "bumgi-slime": {
-        tags: ["about"],
+    "blumgi-slime": {
+        tags: ["about", "chill", "platformer"],
         folder: GAME_CDN + "blumgi-slime/"
     },
     "escape-road": {
-        tags: ["about"],
+        tags: ["about", "action", "driving", "skill"],
         folder: GAME_CDN + "escape-road/"
     },
     "escape-road-2": {
-        tags: ["about"],
+        tags: ["about", "driving", "skill"],
         folder: GAME_CDN + "escape-road-2/"
     },
     "dire-decks": {
-        tags: ["about"],
+        tags: ["about", "action", "shooter", "strategy"],
         folder: GAME_CDN + "dire-decks/"
     },
     "help-no-brake": {
-        tags: ["about"],
+        tags: ["about", "driving", "skill"],
         folder: GAME_CDN + "help-no-brake/"
     },
     "peak": {
-        tags: ["about"],
+        tags: ["about", "multiplayer", "platformer", "port"],
         folder: GAME_CDN + "peak/"
     },
     "scritchy-scratchy": {
-        tags: ["about"],
+        tags: ["about", "port", "strategy"],
         folder: GAME_CDN + "scritchy-scratchy/"
     },
     "clustertruck": {
-        tags: ["about"],
+        tags: ["about", "platformer", "port", "skill"],
         folder: GAME_CDN + "clustertruck/"
     },
     "birb": {
-        tags: ["about"],
+        tags: ["about", "chill"],
         folder: GAME_CDN + "birb/"
     },
-    "paper-io": {
-        tags: ["about"],
+    "paper-io-2": {
+        tags: ["about", "skill", "strategy"],
         folder: GAME_CDN + "paper-io/"
     },
     "duck-life-6": {
-        tags: ["about"],
+        tags: ["about", "chill"],
         folder: GAME_CDN + "duck-life-6/"
     },
     "duck-life-7": {
-        tags: ["about"],
+        tags: ["about", "chill"],
         folder: GAME_CDN + "duck-life-7/"
     },
     "duck-life-8": {
-        tags: ["about"],
+        tags: ["about", "chill"],
         folder: GAME_CDN + "duck-life-8/"
     },
     "cookie-clicker": {
-        tags: ["about"],
+        tags: ["about", "idle"],
         folder: GAME_CDN + "cookie-clicker/"
     },
     "trombone-champ": {
-        tags: ["about"],
+        tags: ["about", "skill", "port"],
         folder: GAME_CDN + "trombone-champ/"
     },
     "animals-volleyball": {
-        tags: ["about"],
+        tags: ["about", "multiplayer", "sport"],
         folder: GAME_CDN + "animals-volleyball/"
     },
     "choppy-orc": {
-        tags: ["about"],
+        tags: ["about", "action", "platformer", "skill"],
         folder: GAME_CDN + "choppy-orc/"
     },
     "core-ball": {
-        tags: ["about"],
+        tags: ["about", "skill"],
         folder: GAME_CDN + "core-ball/"
     },
     "table-tennis-world-tour": {
-        tags: ["about"],
+        tags: ["about", "adventure", "sport"],
         folder: GAME_CDN + "table-tennis-world-tour/"
     },
     "how-to-fish": {
-        tags: ["about"],
+        tags: ["about", "multiplayer", "skill", "port"],
         folder: GAME_CDN + "how-to-fish/"
     },
     "nubbys-number-factory": {
-        tags: ["about"],
+        tags: ["about", "strategy", "port"],
         folder: GAME_CDN + "nubbys-number-factory/"
     },
     "fish": {
-        tags: ["about"],
+        tags: ["about", "skill", "port"],
         folder: GAME_CDN + "fish/"
     },
     "tiny-fishing": {
-        tags: ["about"],
+        tags: ["about", "chill", "skill"],
         folder: GAME_CDN + "tiny-fishing/"
     },
     "idle-breakout": {
-        tags: ["about"],
+        tags: ["about", "idle"],
         folder: GAME_CDN + "idle-breakout/"
     },
     "drift-boss": {
-        tags: ["about"],
+        tags: ["about", "driving", "skill"],
         folder: GAME_CDN + "drift-boss/"
     },
     "geometry-dash": {
-        tags: ["about"],
+        tags: ["about", "platformer", "skill", "port"],
         folder: GAME_CDN + "geometry-dash/"
     },
     "web-dashers": {
-        tags: ["about"],
+        tags: ["about", "platformer", "skill", "port"],
         folder: GAME_CDN + "web-dashers/"
     },
     "keep-talking-and-nobody-explodes": {
-        tags: ["about"],
+        tags: ["about", "multiplayer", "puzzle", "port"],
         folder: GAME_CDN + "keep-talking-and-nobody-explodes/"
     },
     "just-shapes-and-beats": {
-        tags: ["about"],
+        tags: ["about", "action", "skill", "port"],
         folder: GAME_CDN + "just-shapes-and-beats/"
     },
     "tabs": {
-        tags: ["about"],
+        tags: ["about", "strategy", "port"],
         folder: GAME_CDN + "tabs/"
     },
     "meowdoku": {
-        tags: ["about"],
+        tags: ["about", "chill", "puzzle"],
         folder: GAME_CDN + "meowdoku/"
     },
     "golf-orbit": {
-        tags: ["about"],
+        tags: ["about", "skill", "sport"],
         folder: GAME_CDN + "golf-orbit/"
     },
     "rulehouse": {
-        tags: ["about"],
+        tags: ["about", "puzzle", "strategy"],
         folder: GAME_CDN + "rulehouse/"
     },
     "spaceflight-simulator": {
-        tags: ["about"],
+        tags: ["about", "skill", "strategy", "port"],
         folder: GAME_CDN + "spaceflight-simulator/"
     },
     "moto-x3m": {
-        tags: ["about"],
+        tags: ["about", "driving"],
         folder: GAME_CDN + "moto-x3m/"
     },
     "moto-x3m-2": {
-        tags: ["about"],
+        tags: ["about", "driving"],
         folder: GAME_CDN + "moto-x3m-2/"
     },
     "moto-x3m-3": {
-        tags: ["about"],
+        tags: ["about", "driving"],
         folder: GAME_CDN + "moto-x3m-3/"
     },
     "moto-x3m-pool-party": {
-        tags: ["about"],
+        tags: ["about", "driving"],
         folder: GAME_CDN + "moto-x3m-pool-party/"
     },
     "moto-x3m-spooky": {
-        tags: ["about"],
+        tags: ["about", "driving"],
         folder: GAME_CDN + "moto-x3m-spooky/"
     },
     "moto-x3m-winter": {
-        tags: ["about"],
+        tags: ["about", "driving"],
         folder: GAME_CDN + "moto-x3m-winter/"
     },
     "idle-ants": {
-        tags: ["about"],
+        tags: ["about", "idle"],
         folder: GAME_CDN + "idle-ants/"
     },
     "animal-arena": {
-        tags: ["about"],
+        tags: ["about", "action", "multiplayer", "skill"],
         folder: GAME_CDN + "animal-arena/"
     },
     "basketball-stars": {
-        tags: ["about"],
+        tags: ["about", "multiplayer", "sport", "skill"],
         folder: GAME_CDN + "basketball-stars/"
     },
-    "basketbros-io": {
-        tags: ["about"],
-        folder: GAME_CDN + "basketbros-io/"
+    "basket-bros": {
+        tags: ["about", "multiplayer", "sport", "skill"],
+        folder: GAME_CDN + "basket-bros/"
     },
     "bitlife": {
-        tags: ["about"],
+        tags: ["about", "strategy"],
         folder: GAME_CDN + "bitlife/"
     },
     "blumgi-racers": {
-        tags: ["about"],
+        tags: ["about", "driving", "skill"],
         folder: GAME_CDN + "blumgi-racers/"
     },
     "blumgi-rocket": {
-        tags: ["about"],
+        tags: ["about", "action", "skill"],
         folder: GAME_CDN + "blumgi-rocket/"
     },
     "blumgi-slime": {
@@ -1424,35 +1504,35 @@ const gameList = {
         folder: GAME_CDN + "blumgi-slime/"
     },
     "bobble": {
-        tags: ["about"],
+        tags: ["about", "skill", "strategy"],
         folder: GAME_CDN + "bobble/"
     },
     "bounce-back": {
-        tags: ["about"],
+        tags: ["about", "action", "skill"],
         folder: GAME_CDN + "bounce-back/"
     },
     "cell-machine": {
-        tags: ["about"],
+        tags: ["about", "puzzle", "strategy"],
         folder: GAME_CDN + "cell-machine/"
     },
     "chessformer": {
-        tags: ["about"],
+        tags: ["about", "platformer", "puzzle", "strategy"],
         folder: GAME_CDN + "chessformer/"
     },
     "dadish": {
-        tags: ["about"],
+        tags: ["about", "adventure", "platformer", "skill"],
         folder: GAME_CDN + "dadish/"
     },
     "dadish-2": {
-        tags: ["about"],
+        tags: ["about", "adventure", "platformer", "skill"],
         folder: GAME_CDN + "dadish-2/"
     },
     "dadish-3": {
-        tags: ["about"],
+        tags: ["about", "adventure", "platformer", "skill"],
         folder: GAME_CDN + "dadish-3/"
     },
     "dadish-3d": {
-        tags: ["about"],
+        tags: ["about", "adventure", "platformer", "skill"],
         folder: GAME_CDN + "dadish-3d/"
     },
     "drift-hunters": {
@@ -1460,71 +1540,71 @@ const gameList = {
         folder: GAME_CDN + "drift-hunters/"
     },
     "dune": {
-        tags: ["about"],
+        tags: ["about", "action", "skill"],
         folder: GAME_CDN + "dune/"
     },
     "economical": {
-        tags: ["about"],
+        tags: ["about", "puzzle", "strategy"],
         folder: GAME_CDN + "economical/"
     },
     "economical-2": {
-        tags: ["about"],
+        tags: ["about", "puzzle", "strategy"],
         folder: GAME_CDN + "economical-2/"
     },
     "line-rider": {
-        tags: ["about"],
+        tags: ["about", "chill", "skill"],
         folder: GAME_CDN + "line-rider/"
     },
     "retro-bowl-college": {
-        tags: ["about"],
+        tags: ["about", "sport", "strategy"],
         folder: GAME_CDN + "retro-bowl-college/"
     },
     "run-2": {
-        tags: ["about"],
+        tags: ["about", "adventure", "platformer", "skill"],
         folder: GAME_CDN + "run-2/"
     },
     "run-3": {
-        tags: ["about"],
+        tags: ["about", "adventure", "platformer", "skill"],
         folder: GAME_CDN + "run-3/"
     },
     "shadow-trick": {
-        tags: ["about"],
+        tags: ["about", "platformer", "puzzle", "skill"],
         folder: GAME_CDN + "shadow-trick/"
     },
     "stack": {
-        tags: ["about"],
+        tags: ["about", "skill"],
         folder: GAME_CDN + "stack/"
     },
     "tanuki-sunset": {
-        tags: ["about"],
+        tags: ["about", "driving", "skill"],
         folder: GAME_CDN + "tanuki-sunset/"
     },
     "tunnel-rush": {
-        tags: ["about"],
+        tags: ["about", "action", "skill"],
         folder: GAME_CDN + "tunnel-rush/"
     },
     "vex-4": {
-        tags: ["about"],
+        tags: ["about", "platformer", "skill"],
         folder: GAME_CDN + "vex-4/"
     },
     "vex-5": {
-        tags: ["about"],
+        tags: ["about", "platformer", "skill"],
         folder: GAME_CDN + "vex-5/"
     },
     "vex-6": {
-        tags: ["about"],
+        tags: ["about", "platformer", "skill"],
         folder: GAME_CDN + "vex-6/"
     },
     "vex-7": {
-        tags: ["about"],
+        tags: ["about", "platformer", "skill"],
         folder: GAME_CDN + "vex-7/"
     },
     "vex-8": {
-        tags: ["about"],
+        tags: ["about", "platformer", "skill"],
         folder: GAME_CDN + "vex-8/"
     },
     "vex-x3m": {
-        tags: ["about"],
+        tags: ["about", "driving", "platformer", "skill"],
         folder: GAME_CDN + "vex-x3m/"
     },
     "yohoho-io": {
@@ -1534,6 +1614,42 @@ const gameList = {
     "zombie-rush": {
         tags: ["about"],
         folder: GAME_CDN + "zombie-rush/"
+    },
+    "soccer-bros": {
+        tags: ["about", "multiplayer", "sport", "skill"],
+        folder: GAME_CDN + "soccer-bros/"
+    },
+    "football-bros": {
+        tags: ["about", "multiplayer", "sport", "skill"],
+        folder: GAME_CDN + "football-bros/"
+    },
+    "baseball-bros": {
+        tags: ["about", "multiplayer", "sport", "skill"],
+        folder: GAME_CDN + "baseball-bros/"
+    },
+    "wrestle-bros": {
+        tags: ["about"],
+        folder: GAME_CDN + "wrestle-bros/"
+    },
+    "karate-bros": {
+        tags: ["about", "action", "multiplayer", "skill"],
+        folder: GAME_CDN + "karate-bros/"
+    },
+    "kart-bros": {
+        tags: ["about", "driving", "multiplayer", "skill"],
+        folder: GAME_CDN + "kart-bros/"
+    },
+    "we-become-what-we-behold": {
+        tags: ["about"],
+        folder: GAME_CDN + "we-become-what-we-behold/"
+    },
+    "stick-rope-heroes": {
+        tags: ["about", "platformer", "skill"],
+        folder: GAME_CDN + "stick-rope-heroes/"
+    },
+    "ragdoll-hit": {
+        tags: ["about", "action", "skill"],
+        folder: GAME_CDN + "ragdoll-hit/"
     },
 };
 
@@ -1693,6 +1809,53 @@ function arrangeGameRows(games = allGames) {
 <!-- search bar -->
 const normalize = text => text.toLowerCase().replace(/[^a-z0-9]/g, "");
 
+const selectedCategories = new Set();
+
+const categoryButtons = document.querySelectorAll(".category-button");
+
+function getGameTags(gameId) {
+    const tags = gameList[gameId]?.tags;
+    return (Array.isArray(tags) ? tags : [tags])
+        .filter(Boolean)
+        .map(tag => normalize(String(tag)));
+}
+
+function updateCategoryCounts() {
+    categoryButtons.forEach(button => {
+        const category = button.dataset.category;
+        const count = category === "all"
+            ? allGames.length
+            : allGames.filter(game => getGameTags(game.dataset.game).includes(normalize(category))).length;
+        button.querySelector(".category-count").textContent = count;
+    });
+}
+
+updateCategoryCounts();
+categoryButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const category = button.dataset.category;
+
+        if (category === "all") {
+            selectedCategories.clear();
+        } else if (selectedCategories.has(category)) {
+            selectedCategories.delete(category);
+        } else {
+            selectedCategories.add(category);
+        }
+
+        categoryButtons.forEach(categoryButton => {
+            const categoryButtonName = categoryButton.dataset.category;
+            const isActive = categoryButtonName === "all"
+                ? selectedCategories.size === 0
+                : selectedCategories.has(categoryButtonName);
+            categoryButton.classList.toggle("active", isActive);
+            categoryButton.setAttribute("aria-pressed", String(isActive));
+        });
+
+        filterGames();
+    });
+});
+
 const noResults = document.createElement("div");
 noResults.textContent = "No games found";
 noResults.className = "no-results";
@@ -1700,18 +1863,33 @@ gamesContainer.after(noResults);
 
 function filterGames() {
     const query = normalize(document.getElementById("game-search").value);
+    const sortOrder = document.getElementById("game-sort").value;
 
     const matches = allGames.filter(game => {
         const name = normalize(game.querySelector(".image-text").textContent);
         const id = normalize(game.dataset.game);
-        return name.includes(query) || id.includes(query);
+        const matchesSearch = name.includes(query) || id.includes(query);
+        const gameTags = getGameTags(game.dataset.game);
+        const matchesCategory = selectedCategories.size === 0 ||
+            Array.from(selectedCategories).every(category => gameTags.includes(normalize(category)));
+        return matchesSearch && matchesCategory;
     });
+
+    if (sortOrder !== "default") {
+        matches.sort((a, b) => {
+            const nameA = a.querySelector(".image-text").textContent.trim();
+            const nameB = b.querySelector(".image-text").textContent.trim();
+            return nameA.localeCompare(nameB, undefined, { sensitivity: "base" }) *
+                (sortOrder === "asc" ? 1 : -1);
+        });
+    }
 
     arrangeGameRows(matches);
     noResults.classList.toggle("visible", matches.length === 0);
 }
 
 document.getElementById("game-search").addEventListener("input", filterGames);
+document.getElementById("game-sort").addEventListener("change", filterGames);
 
 arrangeGameRows();
 
