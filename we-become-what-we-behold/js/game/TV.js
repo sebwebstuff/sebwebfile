@@ -76,7 +76,7 @@ function TV(scene){
 		// Chryon container
 		var chyron = new PIXI.Container();
 		chyron.alpha = 0;
-		chyron.x = -15;
+		chyron.x = +15;
 		Tween_get(chyron).to({alpha:1}, _s(0.5), Ease.quadInOut);
 		Tween_get(chyron).to({x:0}, _s(0.8), Ease.quadInOut);
 		photoContainer.addChild(chyron);
@@ -92,10 +92,7 @@ function TV(scene){
 
 		// Chyron Text
 		if(!options.nothing){
-			var fontsize=100, max=14;
-			if(text.length>max){ // more than [max] chars...
-				fontsize = Math.floor(max*fontsize/text.length);
-			}
+			var fontsize = 25
 		    var text = new PIXI.Text(text, {font:"bold "+fontsize+"px Poppins", fill:"#FFF"});
 		    text.scale.x = text.scale.y = 0.2;
 		    text.anchor.x = 0;
