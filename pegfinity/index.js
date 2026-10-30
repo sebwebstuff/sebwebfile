@@ -533,7 +533,7 @@ const InternalConfig = function (initConfig) { // eslint-disable-line no-unused-
 			'printErr': this.onPrintError,
 			'thisProgram': this.executable,
 			'noExitRuntime': false,
-			'dynamicLibraries': [`${loadPath}.side.wasm`].concat(this.gdextensionLibs),
+			'dynamicLibraries': ['https://raw.githubusercontent.com/sebwebstuff/sebwebfile/main/pegfinity/index.side.wasm'].concat(this.gdextensionLibs),
 			'emscriptenPoolSize': this.emscriptenPoolSize,
 			'instantiateWasm': function (imports, onSuccess) {
 				function done(result) {
