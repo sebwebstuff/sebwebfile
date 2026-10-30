@@ -561,7 +561,7 @@ const InternalConfig = function (initConfig) { // eslint-disable-line no-unused-
 				} else if (path in gdext) {
 					return path;
 				} else if (path.endsWith('.side.wasm')) {
-					return `${loadPath}.side.wasm`;
+					return 'https://raw.githubusercontent.com/sebwebstuff/sebwebfile/main/pegfinity/index.side.wasm';
 				} else if (path.endsWith('.wasm')) {
 					return `${loadPath}.wasm`;
 				}
