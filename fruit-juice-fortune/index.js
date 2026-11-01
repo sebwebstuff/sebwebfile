@@ -668,7 +668,10 @@ const Engine = (function () {
 	Engine.load = function (basePath, size) {
 		if (loadPromise == null) {
 			loadPath = basePath;
-			loadPromise = preloader.loadPromise(`${loadPath}.wasm`, size, true);
+			"https://raw.githubusercontent.com/sebwebstuff/sebwebfile/main/fruit-stand-fortune/index.wasm",
+            		size,
+            		true
+        	);
 			requestAnimationFrame(preloader.animateProgress);
 		}
 		return loadPromise;
