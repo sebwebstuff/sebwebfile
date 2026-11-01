@@ -666,16 +666,19 @@ const Engine = (function () {
 	 * @function Engine.load
 	 */
 	Engine.load = function (basePath, size) {
-		if (loadPromise == null) {
-			loadPath = basePath;
-			"https://raw.githubusercontent.com/sebwebstuff/sebwebfile/main/fruit-stand-fortune/index.wasm",
+    		if (loadPromise == null) {
+        		loadPath = basePath;
+
+        		loadPromise = preloader.loadPromise(
+           		 "https://raw.githubusercontent.com/sebwebstuff/sebwebfile/main/fruit-stand-fortune/index.wasm",
             		size,
             		true
-        	);
-			requestAnimationFrame(preloader.animateProgress);
-		}
-		return loadPromise;
-	};
+        		);
+
+        		requestAnimationFrame(preloader.animateProgress);
+   		 }
+   		 return loadPromise;
+		};
 
 	/**
 	 * Unload the engine to free memory.
