@@ -3,6 +3,13 @@ html {
 }
 
 /* main page */
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 .home-screen {
     position: fixed;
     inset: 0;
@@ -18,7 +25,7 @@ html {
 
 .home-content h1 {
     margin: 0;
-    font-size: clamp(3rem, 9vw, 7rem);
+    font-size: 10vw;
     font-weight: 700;
     letter-spacing: 0.04em;
 }
@@ -29,13 +36,19 @@ html {
 }
 
 .home-content button {
+    width: 65vw;
     border: 2px solid #d9ead3;
-    border-radius: 999px;
+    border-radius: 10px;
     padding: 13px 34px;
     background: #d9ead3;
     color: #555;
     font: 700 1.1rem "Quicksand", sans-serif;
     cursor: pointer;
+    font-size: 2.5vw;
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
