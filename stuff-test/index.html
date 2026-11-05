@@ -1,5 +1,5 @@
 <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/stuff-test/styles.css">
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/sebwebstuff/sebwebfile/main/stuff-test/styles.css">
 
     <!-- Quicksand Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -7,6 +7,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 </head>
 
+<body>
+    <section class="home-screen" aria-label="Seb Web home">
+        <div class="home-content">
+            <h1>Seb Web</h1>
+            <div style="height: 3.5vw;"></div>
+            <button id="open-games" type="button">Games</button>
+            <br>
+
+            <div style="height: 1.5vw;"></div>
+
+            <a href="https://sebweblink.web.app">
+            <button type="button">Seb Web Links</button>
+            </a>
+        </div>
+    </section>
+
+    <main id="games-page" aria-label="Games catalog">
 <!-- side bar -->
 <div class="left-rectangle">
 </div>
@@ -35,8 +52,9 @@
     <button class="category-button" type="button" data-category="action" aria-pressed="false">Action <span class="category-count">0</span></button>
     <button class="category-button" type="button" data-category="adventure" aria-pressed="false">Adventure <span class="category-count">0</span></button>
     <button class="category-button" type="button" data-category="chill" aria-pressed="false">Chill <span class="category-count">0</span></button>
-        <button class="category-button" type="button" data-category="driving" aria-pressed="false">Driving <span class="category-count">0</span></button>
+    <button class="category-button" type="button" data-category="driving" aria-pressed="false">Driving <span class="category-count">0</span></button>
     <button class="category-button" type="button" data-category="idle" aria-pressed="false">Idle <span class="category-count">0</span></button>
+    <button class="category-button" type="button" data-category="minecraft" aria-pressed="false">Minecraft <span class="category-count">0</span></button>
     <button class="category-button" type="button" data-category="multiplayer" aria-pressed="false">Multiplayer <span class="category-count">0</span></button>
     <button class="category-button" type="button" data-category="platformer" aria-pressed="false">Platformer <span class="category-count">0</span></button>
     <button class="category-button" type="button" data-category="port" aria-pressed="false">Port <span class="category-count">0</span></button>
@@ -694,13 +712,6 @@
         <div class="image-text">Rulehouse</div>
     </div>
 
-    <!-- minecraft -->
-    <div class="image-container" data-game="minecraft" >
-        <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/eaglercraft.png">
-        <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
-        <div class="image-text">Minecraft</div>
-    </div>
-
     <!-- spaceflight-simulator -->
     <div class="image-container" data-game="spaceflight-simulator" >
         <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/spaceflight-simulator.png">
@@ -1069,15 +1080,53 @@
         <div class="image-text">Pegfinity</div>
     </div>
 
+    <!-- dino -->
+    <div class="image-container" data-game="dino" >
+        <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/dino.png">
+        <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+        <div class="image-text">Dino</div>
+    </div>
+
+    <!-- fruit-stand-fortune -->
+    <div class="image-container" data-game="fruit-stand-fortune" >
+        <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/fruit-stand-fortune.png">
+        <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+        <div class="image-text">Fruit Stand Fortune</div>
+    </div>
+
+    <!-- minecraft-26-2 -->
+    <div class="image-container" data-game="minecraft-26-2" >
+        <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/eaglercraft.png">
+        <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+        <div class="image-text">Minecraft 26.2</div>
+    </div>
+    
+    <!-- minecraft-26-3 -->
+    <div class="image-container" data-game="minecraft-26-3" >
+        <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/eaglercraft.png">
+        <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+        <div class="image-text">Minecraft 26.3</div>
+    </div>
+
+    <!-- minecraft-forge-1-6-4 -->
+    <div class="image-container" data-game="minecraft-forge-1-6-4" >
+        <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/forge.png">
+        <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+        <div class="image-text">Minecraft Forge 1.6.4</div>
+    </div>
+
+    <!-- the-broken-script-1-8-8 -->
+    <div class="image-container" data-game="the-broken-script-1-8-8" >
+        <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/broken-script.png">
+        <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+        <div class="image-text">The Broken Script 1.8.8</div>
+    </div>
+
 
 
 </div>
 
-<br>
-<a href="https://sebweblink.web.app" style="display: block; text-align: center;">
-<h1 style="color: #cfe2f3ff; font-size: 5vw; text-decoration-line: underline;">Seb Web Links</h1>
-</a>
-<br>
+    </main>
 
 <script>
 
@@ -1093,7 +1142,7 @@ const gameList = {
         folder: "https://cdn.jsdelivr.net/gh/wasmdotrip/wasm.rip/files/amongus/latest/"
     },
     "eaglercraft-1.12.2": {
-        tags: ["about", "adventure", "port"],
+        tags: ["about", "adventure", "minecraft"],
         folder: GAME_CDN + "eaglercraft-1.12.2/"
     },
     "slow-roads": {
@@ -1668,6 +1717,30 @@ const gameList = {
         tags: ["about", "original", "chill", "idle", "port"],
         folder: GAME_CDN + "pegfinity/"
     },
+    "dino": {
+        tags: ["about", "action", "chill"],
+        folder: GAME_CDN + "dino/"
+    },
+    "fruit-stand-fortune": {
+        tags: ["about", "original", "chill", "idle", "port"],
+        folder: GAME_CDN + "fruit-stand-fortune/"
+    },
+    "minecraft-26-2": {
+        tags: ["about", "adventure", "minecraft"],
+        folder: "https://raw.githubusercontent.com/sebwebstuff/sebwebfile/main/minecraft-26-2/index.html"
+    },
+    "minecraft-26-3": {
+        tags: ["about", "adventure", "minecraft"],
+        folder: "https://raw.githubusercontent.com/sebwebstuff/sebwebfile/main/minecraft-26-3/index.html"
+    },
+    "minecraft-forge-1-6-4": {
+        tags: ["about", "adventure", "minecraft"],
+        folder: GAME_CDN + folder: "https://raw.githubusercontent.com/sebwebstuff/sebwebfile/main/minecraft-forge-1-6-4/index.html"
+    },
+    "the-broken-script-1-8-8": {
+        tags: ["about", "adventure", "minecraft"],
+        folder: "https://raw.githubusercontent.com/sebwebstuff/sebwebfile/main/the-broken-script-1-8-8/index.html"
+    },
 };
 
 
@@ -1910,5 +1983,13 @@ document.getElementById("game-sort").addEventListener("change", filterGames);
 
 arrangeGameRows();
 
+document.getElementById("open-games").addEventListener("click", () => {
+    document.body.classList.add("games-open");
+});
+
+
+
 </script>
+</body>
+</html>
 
