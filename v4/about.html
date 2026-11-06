@@ -397,7 +397,8 @@ a {
         autocomplete="off"
     >
     <select id="game-sort" aria-label="Sort games">
-        <option value="default">Date Added</option>
+        <option value="default">Added: Top-Bottom</option>
+        <option value="reverse">Added: Bottom-Top</option>
         <option value="asc">Alphabetical: A–Z</option>
         <option value="desc">Alphabetical: Z–A</option>
     </select>
@@ -1479,6 +1480,27 @@ a {
         <div class="image-text">The Broken Script 1.8.8</div>
     </div>
 
+    <!-- bit-planes -->
+    <div class="image-container" data-game="bit-planes" >
+        <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/bit-planes.png">
+        <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+        <div class="image-text">Bit Planes</div>
+    </div>
+
+    <!-- worlds-hardest-game -->
+    <div class="image-container" data-game="worlds-hardest-game" >
+        <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/worlds-hardest-game.png">
+        <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+        <div class="image-text">World's Hardest Game</div>
+    </div>
+
+    <!-- escape-road-3 -->
+    <div class="image-container" data-game="escape-road-3" >
+        <img class="main-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/escape-road-3.png">
+        <img class="hover-img" src="https://cdn.jsdelivr.net/gh/sebwebstuff/sebwebfile/images/black-fade.png">
+        <div class="image-text">Escape Road 3</div>
+    </div>
+
 
 
 </div>
@@ -2098,6 +2120,18 @@ const gameList = {
         tags: ["about", "adventure", "minecraft"],
         folder: "https://raw.githubusercontent.com/sebwebstuff/sebwebfile/main/the-broken-script-1-8-8/"
     },
+    "bit-planes": {
+        tags: ["about", "action", "skill"],
+        folder: GAME_CDN + "bit-planes/"
+    },
+    "worlds-hardest-game": {
+        tags: ["about", "platformer", "skill"],
+        folder: GAME_CDN + "worlds-hardest-game/"
+    },
+    "escape-road-3": {
+        tags: ["about", "driving", "skill"],
+        folder: GAME_CDN + "escape-road-3/"
+    },
 };
 
 
@@ -2322,7 +2356,9 @@ function filterGames() {
         return matchesSearch && matchesCategory;
     });
 
-    if (sortOrder !== "default") {
+    if (sortOrder === "reverse") {
+        matches.reverse();
+    } else if (sortOrder !== "default") {
         matches.sort((a, b) => {
             const nameA = a.querySelector(".image-text").textContent.trim();
             const nameB = b.querySelector(".image-text").textContent.trim();
