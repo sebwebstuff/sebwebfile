@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72.87 75.55">
+  <g id="Layer_2-2" data-name="Layer 2">
+    <g>
+      <ellipse cx="38.11" cy="56.43" rx="15.16" ry="10.83" transform="translate(-22.07 88.29) rotate(-83.86)" style="fill: #ff7bac; stroke: #000; stroke-miterlimit: 10; stroke-width: 8px;"/>
+      <g>
+        <ellipse cx="55.45" cy="27.83" rx="15.16" ry="10.83" transform="translate(-2.71 49.44) rotate(-47.04)" style="fill: #ff7bac; stroke: #000; stroke-miterlimit: 10; stroke-width: 8px;"/>
+        <ellipse cx="38.11" cy="19.16" rx="10.83" ry="15.16" style="fill: #ff7bac; stroke: #000; stroke-miterlimit: 10; stroke-width: 8px;"/>
+        <ellipse cx="21.65" cy="26.96" rx="10.83" ry="15.16" transform="translate(-12.93 26.9) rotate(-51.14)" style="fill: #ff7bac; stroke: #000; stroke-miterlimit: 10; stroke-width: 8px;"/>
+        <ellipse cx="18.88" cy="46.28" rx="15.16" ry="10.83" transform="translate(-12.07 7.04) rotate(-16.07)" style="fill: #ff7bac; stroke: #000; stroke-miterlimit: 10; stroke-width: 8px;"/>
+        <ellipse cx="54.58" cy="48.63" rx="10.83" ry="15.16" transform="translate(-14.26 73.21) rotate(-61.35)" style="fill: #ff7bac; stroke: #000; stroke-miterlimit: 10; stroke-width: 8px;"/>
+        <circle cx="38.55" cy="37.8" r="10.4" style="fill: #fbb03b; stroke: #000; stroke-miterlimit: 10; stroke-width: 8px;"/>
+      </g>
+    </g>
+  </g>
+</svg>

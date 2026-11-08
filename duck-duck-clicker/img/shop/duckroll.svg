@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 163.13 150.17">
+  <g id="Layer_2-2" data-name="Layer 2">
+    <g>
+      <g>
+        <path d="m111.29,53.93c-3.53-18.44-21.34-30.53-39.79-27-18.44,3.53-30.53,21.34-27,39.79,1.09,5.68,3.53,10.76,6.93,14.96-5.05,1.59-12.61,3.37-21.79,3.15-13.18-.31-16.83-3.67-20.58-1.15-10.23,6.86-5.37,48.4,18.53,59.58,6.78,3.17,13.48,3.15,17.82,2.7,6.39-.02,14.21-.57,22.97-2.36,7.49-1.53,13.95-3.63,19.27-5.72,2.03-.39,12.78-2.66,19.82-13.04,4.46-6.56,6.41-14.83,4.8-23.24h0c-1.35-7.08-5.02-13.12-10.06-17.51,7.5-7.69,11.25-18.8,9.08-30.15Z" style="fill: #e6e6e6; stroke: #000; stroke-miterlimit: 10; stroke-width: 8px;"/>
+        <ellipse cx="81.35" cy="52.64" rx="7.4" ry="6.78" transform="translate(-2.12 3.44) rotate(-2.39)"/>
+        <path d="m130.48,62.23c-1.66,3.4-5.35,4.65-8.9,5.79-6.25,2.01-12.74,4.1-17.13,0-4.29-4.01-4.81-12.31-1.43-16.18,1.8-2.06,9.14-1.01,23.75,1.16.74.11,2.34.37,3.43,1.68,1.59,1.91,1.4,5.23.27,7.54Z" style="fill: #f15a24; stroke: #000; stroke-miterlimit: 10; stroke-width: 8px;"/>
+      </g>
+      <path d="m105.13,32.68c-7,6.35-17.32-4.67-32.97,1.29-11.27,4.29-14.1,13.12-22.03,11.71-5.28-.94-10.18-5.96-10-10,.13-2.89,3.57-6.27,10.44-13.01.13-.12.26-.26.37-.36,7.42-7.17,20.67-10.24,26.9-11.82,19.58-4.95,20.61-7.89,24.29-5.8,7.9,4.49,9.76,21.86,3,28Z" style="fill: #f15a24; stroke: #000; stroke-miterlimit: 10; stroke-width: 8px;"/>
+    </g>
+    <g>
+      <rect x="131.63" y="84.56" width="15.21" height="50" rx="7.61" ry="7.61" transform="translate(-20.73 33.4) rotate(-12.74)" style="fill: #ccc; stroke: #000; stroke-miterlimit: 10; stroke-width: 8px;"/>
+      <rect x="121.72" y="75.06" width="26" height="29" rx="7.61" ry="7.61" transform="translate(-16.43 31.91) rotate(-12.74)" style="fill: #e6e6e6; stroke: #000; stroke-miterlimit: 10; stroke-width: 8px;"/>
+      <rect x="125.06" y="84.14" width="18" height="5" transform="translate(-15.8 31.69) rotate(-12.74)" style="fill: #ccc;"/>
+      <rect x="126.6" y="90.96" width="18" height="5" transform="translate(-17.27 32.2) rotate(-12.74)" style="fill: #ccc;"/>
+    </g>
+    <circle cx="78.63" cy="86.18" r="9.5" style="fill: #e6e6e6; stroke: #000; stroke-miterlimit: 10; stroke-width: 8px;"/>
+    <circle cx="149.63" cy="103.18" r="9.5" style="fill: #e6e6e6; stroke: #000; stroke-miterlimit: 10; stroke-width: 8px;"/>
+  </g>
+</svg>

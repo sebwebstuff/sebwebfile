@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 138">
+  <g id="Layer_2-2" data-name="Layer 2">
+    <rect width="138" height="138" style="fill: none;"/>
+    <g>
+      <rect x="34" y="84" width="27" height="27" rx="13.5" ry="13.5" transform="translate(78.81 -6.34) rotate(42.75)" style="fill: #e6e6e6; stroke: #000; stroke-miterlimit: 10; stroke-width: 8px;"/>
+      <path d="m106.03,74.93c7.58-9.3,6.18-22.99-3.12-30.56l-14.97-12.2c-9.3-7.58-22.99-6.18-30.56,3.12h0s-6.1,7.49-6.1,7.49l-2.47-2.01c-5.67-4.62-14.14-4.14-18.86,1.44-4.81,5.69-4,14.19,1.75,18.87l3.93,3.2c-2.88,8.56-.37,18.38,7.04,24.42l15.44,12.58c8.78,7.16,21.71,5.84,28.87-2.95l6.1-7.49c.43-.53.84-1.08,1.21-1.64.38-.36.74-.75,1.08-1.16l10.67-13.1Z" style="fill: #e6e6e6; stroke: #000; stroke-miterlimit: 10; stroke-width: 8px;"/>
+    </g>
+  </g>
+</svg>
