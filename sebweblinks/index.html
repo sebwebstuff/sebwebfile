@@ -29,10 +29,38 @@
 
 
 
+<!-- Blob URL -->
+<center>
+<button class="good" onclick="openBlobGame()">Blob URL (Best)</button>
+
+<script>
+async function openBlobGame() {
+    const sourceURL = "https://raw.githubusercontent.com/sebwebstuff/sebwebfile/main/stuff-test/index.html";
+
+    try {
+        const response = await fetch(sourceURL, { cache: "no-store" });
+        if (!response.ok) throw new Error("Failed to load game");
+
+        const html = await response.text();
+        const blob = new Blob([html], { type: "text/html" });
+        const blobURL = URL.createObjectURL(blob);
+
+        window.open(blobURL, "_blank");
+    } catch (error) {
+        console.error(error);
+    }
+}
+</script>
+</center>
+
+<div style="height: 2.625vw;"></div>
+
+
+
 <!-- v5 -->
 <center>
 <a href="https://script.google.com/macros/s/AKfycbyQdkl7_1BsuTU3H-MBkNefEP-RuuREQrP4bI3OeAyICY6GLECbqNXKg_7S-OsgX0VpoA/exec">
-	<button class="good">v5 (Best)</button>
+	<button class="bad">Google Scripts v5</button>
 </a>
 </center>
 
@@ -43,7 +71,7 @@
 <!-- v4 -->
 <center>
 <a href="https://script.google.com/macros/s/AKfycbz0o2xs_9mk_GU3Q8HxrPU_kH-kaMJUPtBO9vgEc_FPFy9V4sK4aUYrnptFEKOwYmwUlg/exec">
-	<button class="good">v4</button>
+	<button class="bad">Google Scripts v4</button>
 </a>
 </center>
 
@@ -54,7 +82,7 @@
 <!-- v3 -->
 <center>
 <a href="https://script.google.com/macros/s/AKfycbxJU1peptldFPzeHUnbWdrOfywVxV8l2mMRiAEKR0wYTGSXn-eis8oJnLbaVh-0mSRLRQ/exec">
-	<button class="good">v3</button>
+	<button class="bad">Google Scripts v3</button>
 </a>
 </center>
 
@@ -65,7 +93,7 @@
 <!-- v2 -->
 <center>
 <a href="https://script.google.com/macros/s/AKfycbz0QFFArR-hEQzoJGYfUf3yMm0RXCC98fpxuKUHvDMHwhSN14vN2maFVBv5t2L9dymYvA/exec">
-	<button class="good">v2</button>
+	<button class="bad">Google Scripts v2</button>
 </a>
 </center>
 
@@ -76,7 +104,7 @@
 <!-- v1 -->
 <center>
 <a href="https://script.google.com/macros/s/AKfycbxIY4a3Z5euG5eGJoWc6XZxwWtv3qIi9pU1ZFoDiEHlbDJxJ_ThYRU2rQF2A0dIe8ukvw/exec">
-	<button class="good">v1</button>
+	<button class="bad">Google Scripts v1</button>
 </a>
 </center>
 
